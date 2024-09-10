@@ -1,0 +1,20 @@
+<section class="choose-us-wrapper section-margin">
+  <div class="section-title">
+    <h1>Why Choose Mindenious for Your Learning Journey?</h1>
+  </div>
+  <div class="card-container">
+    @for (data of chooseUsData; track $index) {
+      <div class="card-wrapper has-box-shadow">
+        <div class="card-header">
+          <div class="img-wrapper">
+            <img src="{{data.imageSrc}}" alt="{{data.title + ' Mindenious'}}" loading="lazy">
+          </div>
+          <h3 class="card-title">{{data.title}}</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-description">{{data.description}}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

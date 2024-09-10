@@ -1,0 +1,47 @@
+  <!-- side bar menu -->
+  <div class="sidebar" [class.active]="isSidebarActive">
+    <div class="mega-menu">
+      <div class="heading">
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Mindenious" />
+        </div>
+        <div class="close-icon">
+          @if (isSideMenuOpen) {
+            <div (click)="closeSubMenu()" class="icon"><i class="fa fa-arrow-left"></i></div>
+          }
+          <div (click)="closeSidebar()" class="icon"><i class="fa fa-times"></i></div>
+        </div>
+      </div>
+      <ul class="program-list">
+        @for(domain of megaMenuObject; track domain.title) {
+          <li (click)="toggleSidebar(domain.title)">
+            <a routerLink="/" [class.active]="domain.isExpanded">
+              <div class="icon">
+                <span><i class="{{domain.icon}}"></i></span>
+              </div>
+              <header><span>{{domain.title}}</span></header>
+            </a>
+          </li>
+
+          @if(isSideMenuOpen && domain.isExpanded) {
+            <div class="mega-sub-menu">
+              <ul class="program-category">
+                @for(subdomain of domain.subdomains; track subdomain.courseName) {
+                  <li>
+                    <app-course-card [courseName]="subdomain.courseName" [courseBgImg]="subdomain.courseBgImg" [height]="'60px'" [width]="'100%'"
+                      (click)="navigateToCourse('/course', subdomain)"></app-course-card>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+        }
+
+      </ul>
+      @if (!isSideMenuOpen) {
+        <div class="menu-banner">
+          <img src="assets/images/discover.png" alt="Mindenious Edutech Banner" loading="lazy">
+        </div>
+      }
+    </div>
+  </div>

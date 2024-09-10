@@ -1,0 +1,14 @@
+<section class="university-section">
+  <ul class="university-wrapper">
+    @for (item of universities; track $index) {
+      <li class="universities">
+        <div class="university__image-wrapper">
+          <img class="university__image"
+            [src]="item.url" alt="mit-idss"
+            [height]="imgHeight"
+            [width]="imgWidth">
+        </div>
+      </li>
+    }
+  </ul>
+</section>

@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="title" (click)="toggle()">
+      <h3>{{title}}</h3>
+      <div class="icon" (click)="toggle()"><span>{{isExpanded ? "-" : "+"}}</span></div>
+    </div>
+    <div class="accordion-body" #content>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

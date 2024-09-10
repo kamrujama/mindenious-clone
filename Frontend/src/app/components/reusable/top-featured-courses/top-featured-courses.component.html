@@ -1,0 +1,24 @@
+<section class="top-featured-courses-wrapper section-margin">
+  <div class="section-title">
+    <h1>Trending Courses</h1>
+    <p>Choose courses taught by real-world experts.</p>
+  </div>
+  <div class="content-card">
+    @for (course of topFeaturedCourses; track $index) {
+    <div class="course-card">
+      <div class="course-heading">
+        <h1>{{course.courseName}}</h1>
+      </div>
+      <div class="course-image">
+        <img [src]="course.courseBgImg" alt="${course.title}">
+      </div>
+      <div class="course-description">
+        <p>{{course.description}}</p>
+      </div>
+      <!-- <div class="course-footer"> -->
+        <button class="button" (click)="navigateToCourse('/course', course)">Read More</button>
+      <!-- </div> -->
+    </div>
+    }
+  </div>
+</section>

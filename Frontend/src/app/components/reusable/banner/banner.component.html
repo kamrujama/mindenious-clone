@@ -1,0 +1,25 @@
+<section class="home-banner section-margin">
+  <div class="home-banner-wrapper">
+    <div class="home-banner-text">
+      <p class="home-overline">{{sectionHeadData.sectionOverline}}</p>
+      <h1 class="home-title">{{sectionHeadData.sectionTitle}}</h1>
+      <p class="home-subtitle">{{sectionHeadData.sectionSubtitle}}</p>
+      <div class="explore-btn">
+        <button (click)="scrollIntoView('tredingCourseLists')" class="button">Explore More</button>
+        <button (click)="toggleEnrollNow()" class="button enroll-now">Subscribe Now</button>
+      </div>
+    </div>
+    <div class="hero-image is-relative">
+      <!-- @defer { -->
+        <img [src]="bannerData.learnerImgSrc" alt="" >
+      <!-- }  @loading (minimum 2000ms) { -->
+        <!-- <div class="loader">Loading..</div> -->
+      <!-- } -->
+    </div>
+  </div>
+</section>
+
+@if (isEnrollNow) {
+  <app-newsletter-subscription-modal (close)="isEnrollNow = false"></app-newsletter-subscription-modal>
+}
+

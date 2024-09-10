@@ -1,0 +1,23 @@
+<section class="course-module">
+  <div class="course-accordian">
+    <mat-accordion class="module-accordian">
+      @for (data of accordionData; track $index) {
+      <mat-expansion-panel class="module-wrapper">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="title">
+            {{data?.title}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="list">
+          @for (subModule of data?.subTitle; track $index) {
+          <li>{{subModule}}</li>
+          }
+          @if (data?.courseId) {
+          <button class="button accordion-link-btn" (click)="redirectToCourse(data?.courseId)">View Course</button>
+          }
+        </ul>
+      </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </div>
+</section>

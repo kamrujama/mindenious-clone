@@ -1,0 +1,15 @@
+<section>
+  <header>
+    <!-- Show navbar -->
+    <app-navbar></app-navbar>
+    @if (signalService.isCompanyCollabOpen()) {
+      <app-company-collab></app-company-collab>
+    }
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</section>
+<footer>
+  <app-dark-footer></app-dark-footer>
+</footer>

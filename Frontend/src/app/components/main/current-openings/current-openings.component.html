@@ -1,0 +1,35 @@
+<section class="current-opening-wrapper section-margin">
+  <div class="section-title">
+    <h1>Current Job Openings</h1>
+  </div>
+  <div class="card-container">
+    @for (currentOpeningDetail of currentOpeningDetails; track $index) {
+      <div class="card-wrapper has-box-shadow" (click)="navigateToOpeningDetails(currentOpeningDetail.id)">
+        <div class="card-header">
+          <h2>{{currentOpeningDetail.role}}</h2>
+          <span>{{currentOpeningDetail.category}}</span>
+        </div>
+        <div class="card-body">
+          <p>{{currentOpeningDetail.description}}</p>
+        </div>
+        <div class="card-footer">
+          <div class="footer-container">
+            <span><i class="{{currentOpeningDetail.locationIcon}}"></i></span>
+            <span>{{currentOpeningDetail.location}}</span>
+          </div>
+          <div class="footer-container">
+            <span><i class="{{currentOpeningDetail.durationIcon}}"></i></span>
+            <span>{{currentOpeningDetail.duration}}</span>
+          </div>
+          <!-- <div class="footer-container">
+            <span><i class="{{currentOpeningDetail.salaryIcon}}"></i></span>
+            <span>{{currentOpeningDetail.salary}}</span>
+          </div> -->
+        </div>
+        <div class="explore-more">
+          <button class="button" (click)="navigateToOpeningDetails(currentOpeningDetail.id)">Know More</button>
+        </div>
+      </div>
+    }
+  </div>
+</section>

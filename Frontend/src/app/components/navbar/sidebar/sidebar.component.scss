@@ -1,0 +1,113 @@
+.sidebar {
+  display: none !important;
+}
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    &.active {
+      display: block !important;
+    }
+
+    .mega-menu {
+      @include flex(default, default, column);
+
+      gap: 20px;
+      height: 100vh;
+      width: 100vw;
+      background: var(--bg-dark);
+      padding: 40px;
+      position: absolute;
+      top: 0 !important;
+      left: 0 !important;
+      animation: scale 0.5s ease-in-out;
+
+      .heading {
+        @include flex(space-between, center, row);
+        height: 100px;
+        border-bottom: 1px solid white;
+        background: #eff0ef;
+        padding: 20px;
+        border-radius: 10px;
+
+        .logo {
+          img {
+            height: 100px;
+            width: 100px;
+          }
+        }
+
+        .close-icon {
+          display: flex;
+          gap: 40px;
+
+          .icon {
+            font-size: 24px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .program-list {
+        @include flex(default, default, column);
+        gap: 20px;
+        background: #eff0ef;
+        border-radius: 10px;
+        padding: 20px;
+        color: black;
+
+        .mega-sub-menu {
+          position: absolute;
+          top: 17vh;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: var(--bg-dark);
+          padding: 20px 40px;
+
+          .program-category {
+            overflow-y: auto;
+            height: fit-content;
+            padding: 0px;
+            border-radius: 10px;
+            background-color: var(--bg-light);
+          }
+        }
+
+        li {
+          a {
+            display: flex;
+            gap: 20px;
+
+            .icon {
+              width: 10%;
+            }
+
+            header {
+              width: 90%;
+            }
+          }
+        }
+      }
+
+      .menu-banner {
+        height: fit-content;
+        width: 100%;
+        border-radius: 10px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

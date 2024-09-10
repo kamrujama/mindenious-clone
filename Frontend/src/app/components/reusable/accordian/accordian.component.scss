@@ -1,0 +1,38 @@
+.course-module {
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .course-accordian {
+    .module-accordian {
+      &,
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .accordion-link-btn {
+          width: max-content;
+          padding: 5px 10px;
+          font-size: var(--h5);
+          margin-top: 10px;
+        }
+      }
+
+      .module-wrapper {
+        padding: 8px 0x;
+        box-shadow: 0 0 1px 1px #ccc;
+        border-radius: 5px;
+        margin: 0px !important;
+      }
+
+      .title {
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: var(--h4);
+        text-transform: capitalize;
+      }
+    }
+  }
+}

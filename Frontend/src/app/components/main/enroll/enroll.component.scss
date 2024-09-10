@@ -1,0 +1,90 @@
+.payment-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(36, 88, 128);
+  height: 100vh;
+  padding: 120px 5% 40px 5%;
+
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    .credit-debit-card {
+
+      .card-fields {
+
+        form,
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          input {
+            border-radius: 32px;
+            outline: none;
+            border: 1px solid gray;
+            padding: 10px;
+          }
+        }
+
+        .save-card {
+          display: flex;
+          gap: 5px;
+        }
+
+        .proceed-btn {
+          width: 100%;
+          background: rgb(36, 88, 128);
+          color: white;
+          padding: 10px 20px;
+          border-radius: 32px;
+          cursor: pointer;
+        }
+
+        .expiry {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+
+    .amount-mode {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      cursor: pointer;
+
+      .full-payment {
+        padding: 10px 20px;
+        background: rgb(36, 88, 128);
+        border-radius: 32px;
+        color: white;
+      }
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      padding-right: 15px;
+      background-color: rgb(36, 88, 128);
+      border-radius: 32px;
+      color: white;
+      align-items: center;
+
+      .pay {
+        width: fit-content;
+        background: white;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 32px;
+        cursor: pointer;
+      }
+    }
+  }
+}

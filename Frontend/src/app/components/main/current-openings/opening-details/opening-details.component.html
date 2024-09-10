@@ -1,0 +1,98 @@
+<section class="opening-details-wrapper section-landing-margin">
+  <div class="details-header">
+    <h2>{{openingDetailsData.role}}</h2>
+    <div class="details">
+      <span>{{openingDetailsData.category}}</span>
+      <span><i style="margin-left: 5px;"
+          class="{{openingDetailsData.locationIcon}}"></i>{{openingDetailsData.location}}</span>
+      <span><i style="margin-left: 5px;"
+          class="{{openingDetailsData.durationIcon}}"></i>{{openingDetailsData.duration}}</span>
+      <!-- <span><i style="margin-left: 5px;" class="{{openingDetailsData.salaryIcon}}"></i>{{openingDetailsData.salary}}</span> -->
+    </div>
+  </div>
+  <article class="aboutUsBody">
+    <h3>About Us</h3>
+    <p>{{openingDetailsData.openingDetails.aboutUs}}</p>
+  </article>
+  <article class="jobDescriptionBody">
+    <h3>Job Description</h3>
+    <p>{{openingDetailsData.openingDetails.jobDescription}}</p>
+  </article>
+  <article class="keyResponsibilities">
+    <h3>Key Responsibilities</h3>
+    <ol>
+      @for (responsibility of openingDetailsData.openingDetails.keyResponsibilities; track $index) {
+      <li><span class="resptitle">{{responsibility.title}} : </span><span
+          class="description">{{responsibility.description}}</span></li>
+      }
+    </ol>
+  </article>
+  <article class="qualifications">
+    <h3>Qualifications</h3>
+    <ul>
+      @for (qualification of openingDetailsData.openingDetails.qualifications; track $index) {
+      <li><span class="title">{{qualification}}</span></li>
+      }
+    </ul>
+  </article>
+  <article class="whatWeOffer">
+    <h3>What We Offer</h3>
+    <ul>
+      @for (offer of openingDetailsData.openingDetails.whatWeOffer; track $index) {
+      <li><span class="title">{{offer}}</span></li>
+      }
+    </ul>
+  </article>
+  <article class="joinUs">
+    <p>{{openingDetailsData.openingDetails.joinOurTeamDescription}}</p>
+  </article>
+
+  <form #sheetForm="ngForm" method="POST" class="input-wrapper" (ngSubmit)="applyNow(sheetForm)">
+    <input class="input" type="text" name="role" [(ngModel)]="openingDetailsData.role" style="display: none;">
+    <input #name="ngModel" class="input" type="text" name="name" placeholder="Full Name" minlength="3" ngModel required>
+    @if (name.invalid && (name.dirty || name.touched)) {
+      @if (name.hasError('required')) {
+        <small>Name is required.</small>
+      }
+      @if (name.hasError('minlength')) {
+        <small>Name must be at least 3 characters long.</small>
+      }
+    }
+
+    <input #email="ngModel" class="input" type="email" name="email" placeholder="E-mail" ngModel required>
+    @if (email.invalid && (email.dirty || email.touched)) {
+      @if (email.hasError('required')) {
+        <small>Email is required.</small>
+      }
+      @if (email.hasError('email')) {
+        <small>Please enter a valid email.</small>
+      }
+    }
+
+    <input #phone="ngModel" class="input" type="number" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" ngModel required>
+    @if (phone.invalid && (phone.dirty || phone.touched)) {
+      @if (phone.hasError('required')) {
+        <small>Phone is required.</small>
+      }
+
+      @if (phone.hasError('pattern')) {
+        <small>Phone must be at least 10 digit.</small>
+      }
+    }
+    <textarea class="input" name="message" id="" placeholder="Message" cols="30" rows="6" ngModel></textarea>
+    <button class="button" type="submit" [disabled]="sheetForm.invalid">
+      {{loading ? 'Loading...' : 'Apply Now'}}
+    </button>
+    <p class="drop-mail-info">{{'*Drop your resume to : hr@mindenious.com'}}</p>
+  </form>
+
+  @if (isFormSubmitted) {
+  <app-modal-popup [modalDuration]="3000" [modalType]="'success'"
+    [modalBody]="'Thank you for subscribing to our newsletter.'"></app-modal-popup>
+  }
+
+  @if (isFormInvalid) {
+  <app-modal-popup [modalDuration]="3000" [modalType]="'error'" [modalBody]="invalidErrorMessage"></app-modal-popup>
+  }
+
+</section>

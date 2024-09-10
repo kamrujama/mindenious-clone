@@ -1,0 +1,43 @@
+<section class="landing-page-container">
+  <div class="left-section">
+    <div class="page-heading">
+      <p class="page-sub-title">Hi, there</p>
+      <h1><span class="red-text">Mindenious</span> is here to be your new learning partner</h1>
+      <h6 class="page-sub-heading">Elevate Your Intellect with Mindenious</h6>
+      <p class="page-desc"> "Mindenious is an innovative educational technology platform which isn't just another
+        ed-tech platform; we're the bridge that spans the gap between classroom theory and
+        real-world industry needs. From internships to personalized career guidance and
+        mentorship, we're here to help students navigate the ever-shifting terrain of
+        professional development. With us, education isn't just about learning more, it's about
+        thriving."</p>
+    </div>
+    <div class="our-service-section">
+      <h1>Our Services</h1>
+      <div class="grid-area">
+        @for (service of ourServices; track $index) {
+        <div class="service-card has-box-shadow">
+          <div class="card-header">
+            <p><i class="{{service.icon}}"></i></p>
+            <h4>{{service.title}}</h4>
+          </div>
+          <p>{{service.description}}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="right-section">
+    <div class="image-section">
+      <img src="../../../assets/images/landing_page_img.png" alt="Mindenious" loading="lazy">
+      @for (card of cards; track $index) {
+      <div class="card card{{$index + 1}}">
+        <div class="icon"><i class="{{card.icon}}"></i></div>
+        <div class="description">
+          <h4>{{card.title}}</h4>
+          <p>{{card.description}}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

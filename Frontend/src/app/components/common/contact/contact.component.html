@@ -1,0 +1,63 @@
+<section class="contact-section section-landing-margin">
+  <div class="banner has-box-shadow">
+    <div class="img-wrapper">
+      <img src="assets/images/contactForm.png" alt="Contact us - Mindenious" loading="lazy">
+    </div>
+    <div class="form-wrapper">
+      <div class="section-title">
+        <h1>Join us. From anywhere</h1>
+        <p>We’re on a mission to Make Automation Work for Everyone.</p>
+        <h4>Get-in-touch</h4>
+      </div>
+      <div class="form-section">
+        <form #sheetForm="ngForm" method="POST" class="input-wrapper" (ngSubmit)="contactUs(sheetForm)">
+          <input #name="ngModel" class="input" type="text" name="name" placeholder="Full Name" minlength="3" ngModel required>
+              @if (name.invalid && (name.dirty || name.touched)) {
+                @if (name.hasError('required')) {
+                <small>Name is required.</small>
+                }
+                @if (name.hasError('minlength')) {
+                <small>Name must be at least 3 characters long.</small>
+                }
+              }
+
+              <input #email="ngModel" class="input" type="email" name="email" placeholder="E-mail" ngModel required>
+              @if (email.invalid && (email.dirty || email.touched)) {
+                @if (email.hasError('required')) {
+                <small>Email is required.</small>
+                }
+                @if (email.hasError('email')) {
+                <small>Please enter a valid email.</small>
+                }
+              }
+
+              <input #phone="ngModel" class="input" type="number" name="phone" placeholder="Phone Number" minlength="10" maxlength="10" pattern="[0-9]{10}" ngModel required>
+              @if (phone.invalid && (phone.dirty || phone.touched)) {
+                @if (phone.hasError('required')) {
+                  <small>Phone is required.</small>
+                }
+
+                @if (phone.hasError('pattern')) {
+                  <small>Phone must be at least 10 digit.</small>
+                }
+              }
+          <button class="button" type="submit" [disabled]="sheetForm.invalid">
+            {{loading ? 'Loading...' : 'Subscribe'}}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  @if (isFormSubmitted) {
+    <app-modal-popup [modalDuration]="3000" [modalType]="'success'" [modalBody]="'Thank you for subscribing to our newsletter.'"></app-modal-popup>
+  }
+
+  @if (isFormInvalid) {
+    <app-modal-popup [modalDuration]="3000" [modalType]="'error'" [modalBody]="invalidErrorMessage"></app-modal-popup>
+  }
+
+
+  <!-- how we work -->
+  <!-- <app-service-card [ourServices]="howWeWork" [title]="'How we work'"></app-service-card> -->
+</section>

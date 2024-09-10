@@ -1,0 +1,84 @@
+<!-- About us banner -->
+<section class="about-us-banner section-landing-margin">
+  <div class="about-us-wrapper">
+    <div class="left-panel has-box-shadow">
+      <div class="title">
+        <h6>How it Started</h6>
+        <h1>Our Dream is Gloabl Learning Transformation</h1>
+      </div>
+      <div class="growth-img">
+        <img src="assets/images/growth.png" alt="About Us: Mindenious" loading="lazy">
+      </div>
+      <div class="description">
+        <p>
+          "Mindenious is an innovative educational technology platform which isn't just another
+          ed-tech platform; we're the bridge that spans the gap between classroom theory and
+          real-world industry needs. From internships to personalized career guidance and
+          mentorship, we're here to help students navigate the ever-shifting terrain of
+          professional development. With us, education isn't just about learning more, it's about
+          thriving."</p>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="about-us-image has-box-shadow">
+        <img src="assets/images/aboutus.png"  loading="lazy" alt="About Us: Mindenious">
+      </div>
+      <div class="rating-buttons has-box-shadow">
+        @for (rating of ratings; track $index) {
+          <div class="rating-wrapper has-box-shadow">
+            <h1>{{rating.number}}</h1>
+            <p>{{rating.title}}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="award">
+  <div class="award-wraper">
+    <div class="paragraph">
+      <h1 class="count">Award winning</h1>
+      <p>At Paramount we are passionate visionaries committed to transforming lives through real estate. We create
+        meaningful connections, build thriving communities</p>
+    </div>
+    <div class="awards-info-container">
+      <div class="awards-info">
+        <div class="count"><span>10x</span></div>
+        <p>Building wonderful spaces since 20s</p>
+      </div>
+      <div class="awards-info">
+        <div class="count"><span>2400+</span></div>
+        <p>Building wonderful spaces since 20s</p>
+      </div>
+      <div class="awards-info">
+        <div class="count"><span>2400+</span></div>
+        <p>Building wonderful spaces since 20s</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- why use -->
+ <app-why-choose-us></app-why-choose-us>
+
+ <!--  Our alumini -->
+<app-image-auto-slider></app-image-auto-slider>
+
+<!-- Our Mentors -->
+<app-mentors-card></app-mentors-card>
+
+ <!-- Reviews -->
+<app-career-reviews></app-career-reviews>
+
+<!-- Tools Used -->
+
+<!-- Testimonial Card Section -->
+<!-- <app-testimonial-small-card></app-testimonial-small-card> -->
+
+<!-- Our Designation -->
+<!-- <section class="our-designation">
+  <app-service-card [ourServices]="ourServices" [title]="'Our Designation'" [mainBorderRadius]="'0px'"
+    [bgColor]="'var(--bg-dark)'" [mainBorderRadius]="'10px'"></app-service-card>
+</section> -->

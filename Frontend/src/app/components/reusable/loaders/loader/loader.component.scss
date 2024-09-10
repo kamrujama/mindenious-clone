@@ -1,0 +1,35 @@
+.loader {
+  font-size: 20px;
+  animation: loadingAnim 1.5s infinite ease;
+}
+.dot {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background-color: black;
+  margin: 0 5px;
+  border-radius: 50%;
+  animation: loadingAnim 1.5s infinite ease;
+}
+
+.dot1 {
+  animation-delay: 0.1s;
+}
+
+.dot2 {
+  animation-delay: 0.3s;
+}
+
+.dot3 {
+  animation-delay: 0.5s;
+}
+
+@keyframes loadingAnim {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}

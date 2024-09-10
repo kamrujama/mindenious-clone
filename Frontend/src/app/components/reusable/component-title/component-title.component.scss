@@ -1,0 +1,40 @@
+.section-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px 18%;
+
+  .section-overline {
+    color: var(--text-navy);
+    letter-spacing: 3px;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+
+  .section-subtitle {
+    opacity: 0.6;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media screen and (max-width: 825px) {
+  .section-head {
+    padding: 0;
+
+    .section-overline {
+      font-size: 14px;
+    }
+
+    .section-title {
+      font-size: 24px;
+    }
+  }
+}

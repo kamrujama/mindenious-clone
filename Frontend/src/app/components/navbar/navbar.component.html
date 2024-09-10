@@ -1,0 +1,134 @@
+<header class="header-container">
+  <div class="wrapper">
+    <div class="left-section">
+      <!-- logo -->
+      <div class="logo">
+        <a [class.active]="isLinkActive('/')" (click)="navigateTo('/')">
+          <img [src]="logoPath" alt="" />
+        </a>
+      </div>
+
+      <!-- mega menu -->
+      <div class="explore-programs" [class.active]="showMegaMenu">
+        @if (showMegaMenu) {
+        <div class="overlay"></div>
+        }
+        <button [class.active]="showMegaMenu" class="button is-bg-primary desktop-btn"
+          (click)="showMegaMenu = !showMegaMenu">Programs</button>
+        <div class="mega-menu">
+          <ul class="program-list">
+            @for(domain of megaMenuObject; track domain.title) {
+            <li (click)="toggleProgramSubmenu(domain.title)">
+              <a routerLink="/" [class.active]="domain.isExpanded">
+                <div class="icon">
+                  <span><i class="{{domain.icon}}"></i></span>
+                </div>
+                <header><span>{{domain.title}}</span><span><i class="fa fa-angle-right"></i></span></header>
+              </a>
+            </li>
+
+            @if(domain.isExpanded) {
+            <div class="mega-sub-menu">
+              <ul class="program-category">
+                @for(subdomain of domain.subdomains; track subdomain.courseName) {
+                <li>
+                  <app-course-card [courseName]="subdomain.courseName" [courseDuration]="subdomain.courseDuration"
+                    [courseMode]="subdomain.courseMode" [courseBgImg]="subdomain.courseBgImg" [height]="'120px'"
+                    [width]="'310px'" (click)="navigateToCourse('/course', subdomain)"></app-course-card>
+                </li>
+                }
+              </ul>
+            </div>
+            }
+            }
+
+          </ul>
+          <div class="menu-banner">
+            <!-- <img src="../../../assets/images/nav-banner.jpeg" alt=""> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <!-- nav menus -->
+      <ul class="nav-links">
+        @for (item of mainNavMenuObjects; track $index) {
+        <li [class.active]="isLinkActive(item.link)">
+          <span class="icon" style="margin-right: 10px;">
+            <i [class]="item.icon"></i>
+          </span>
+          <a (click)="navigateTo(item.link)">{{item.title}}</a>
+        </li>
+        }
+        <!-- trending course menu -->
+        <div class="trending-course-wrapper" [class.active]="isTrendingModalOpen"
+          (click)="isTrendingModalOpen = !isTrendingModalOpen">
+          <div class="trending-title">
+            <span class="title">Trending</span>
+            <span class="count">{{topTrendingCourses.length}}</span>
+          </div>
+
+          <!-- @if(isTrendingModalOpen) { -->
+          <ul class="trending-course-items">
+            @for (item of topTrendingCourses; track $index) {
+            <li class="trending-course-item" (click)="navigateToCourse('/course', item)">{{item.courseName | shorten : 20}}
+            </li>
+            }
+          </ul>
+          <!-- } -->
+        </div>
+
+        <div class="collab-logo">
+          <img src="assets/images/companyCollab/wiproMainLogo.png" alt="">
+        </div>
+      </ul>
+
+      <!-- Show Trending topbar -->
+      <app-trending-course-bar></app-trending-course-bar>
+
+      <!-- Responsive mega menu -->
+      <app-sidebar [megaMenuObject]="megaMenuObject" [isSidebarActive]="showMegaMenu"
+        (closeMegaMenu)="showMegaMenu = false"></app-sidebar>
+
+      <!-- login -->
+      <!-- <div class="login button" >
+        <div class="login-btn" (click)="auth.isLoggedIn ? navigateTo('/profile') : navigateTo('/login')">
+          <span class="icon">
+            <i class="fa fa-user"></i>
+          </span>
+          <span class="title">{{auth.isLoggedIn ? auth.userData[0].username : 'Login'}}</span>
+        </div>
+      </div> -->
+      <!-- trending course menu -->
+      @if(isTrendingModalOpen) {
+        <ul class="trending-course-items">
+          @for (item of topTrendingCourses; track $index) {
+          <li class="trending-course-item" (click)="navigateToCourse('/course', item)">{{item.courseName | shorten : 20}}
+          </li>
+          }
+        </ul>
+        }
+
+      <!-- Response mobile menu -->
+      <div class="mobile-nav-links">
+        <div class="content">
+          <ul>
+            @for (item of mainNavMenuObjects; track $index) {
+            <li>
+              <a [class.active]="isLinkActive(item.link)" (click)="navigateTo(item.link)" exact>
+                <div class="icon">
+                  <span><i [class]="item.icon"></i></span>
+                </div>
+                <div class="title">
+                  <span>{{item.title}}</span>
+                </div>
+              </a>
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,32 @@
+<section class="trending-courses has-box-shadow section-margin" id="treding-courses" #tredingCourses>
+  <div class="section-title">
+    <h1>Top Featured Courses</h1>
+    <p>Choose from 100+ courses with new additions published every month</p>
+  </div>
+
+  <div class="content-card">
+    <ul class="course-category-wrapper">
+      @for (course of courseCategory; track $index) {
+      <li (click)="toggleProgramSubmenu(course.title, course)" class="course-category-item"
+        [class.active]="course.isExpanded">{{course.title}}</li>
+      }
+    </ul>
+    @if (coursesList.subdomains.length > 0 && coursesList.isExpanded) {
+    <div class="card-wrapper">
+      @for (subdomain of coursesList.subdomains; track $index) {
+      <div class="course-card has-box-shadow" (click)="navigateToCourse('/course', subdomain)">
+        <div class="course-heading">
+          <img [src]="subdomain.courseBgImg" alt="${course.title}">
+        </div>
+        <div class="description">
+          <h1 [title]="subdomain.courseName">{{subdomain.courseName | shorten : 15 }}</h1>
+          <div class="course-footer">
+            <button class="button" (click)="navigateToCourse('/course', subdomain)">Explore Now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</section>

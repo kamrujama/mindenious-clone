@@ -1,0 +1,16 @@
+{
+  "SignupUser": [
+    {
+      "id": "d2f7",
+      "username": "ansari",
+      "email": "abc@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "9b28",
+      "username": "",
+      "email": "",
+      "password": ""
+    }
+  ]
+}

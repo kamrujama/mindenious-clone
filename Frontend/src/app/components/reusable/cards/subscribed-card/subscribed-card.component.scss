@@ -1,0 +1,38 @@
+.subscribed-card-wrapper {
+
+  .subscribed-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card-image {
+      height: 300px;
+      width: 100%;
+      border-radius: 10px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+
+    .card-content {
+      text-align: center;
+
+      .card-title {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .card-description {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}

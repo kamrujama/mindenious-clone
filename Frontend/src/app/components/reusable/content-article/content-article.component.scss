@@ -1,0 +1,49 @@
+@mixin flex() {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+article {
+  h3 {
+    font-weight: 500;
+    background: var(--b-light-2);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  ol {
+    li {
+      span {
+        font-weight: 300;
+      }
+
+      .resptitle {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: square;
+
+    li {
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+
+  ol,
+  ul {
+    @include flex;
+    padding-left: 20px;
+  }
+}

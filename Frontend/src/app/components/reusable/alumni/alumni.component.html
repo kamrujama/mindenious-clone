@@ -1,0 +1,32 @@
+
+<section class="alumni-section section-margin">
+  <div class="section-title">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="alumni-slider">
+    <div class="logos">
+      <div class="logo-slide-left">
+        @for (img of imgUrls; track $index) {
+        <img decoding="async" height="80px" [src]="img.url">
+        }
+      </div>
+      <div class="logo-slide-left">
+        @for (img of imgUrls; track $index) {
+        <img decoding="async" height="80px" [src]="img.url">
+        }
+      </div>
+    </div>
+    <div class="logos">
+      <div class="logo-slide-right">
+        @for (img of imgUrls; track $index) {
+        <img decoding="async" height="80px" [src]="img.url">
+        }
+      </div>
+      <div class="logo-slide-right">
+        @for (img of imgUrls; track $index) {
+        <img decoding="async" height="80px" [src]="img.url">
+        }
+      </div>
+    </div>
+  </div>
+</section>

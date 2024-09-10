@@ -1,0 +1,28 @@
+<section class="testimonials-wrapper">
+  <div class="section-head">
+    <div class="content">
+      <div class="testimonial-body">
+        <div class="read-more-wrapper">
+          <h3>“{{data.heading}}”</h3>
+          <div class="read-more">
+            <p>{{data.body}}</p>
+          </div>
+        </div>
+        <div class="testimonial-info">
+          <p class="name">{{data.devName}}</p>
+          <p class="position">{{data.devRole}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-image-card">
+      @if (data.videoUrl) {
+        <video controls [poster]="data.videoPoster" (click)="playVideo()">
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      } @else {
+        <img src="{{data.imageUrl}}" alt="Testimonial: Mindenious" loading="lazy">
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,276 @@
+.landing-page-wrapper {
+  display: flex;
+  gap: 20px;
+  height: 80vh;
+  animation: scale 0.5s ease-in-out;
+
+  .image-section {
+    height: 100%;
+    width: 50%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  .info-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 44px;
+      font-weight: 700;
+
+      @media screen and (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing-page-wrapper {
+    height: 100%;
+    flex-direction: column;
+
+    .image-section {
+      width: 100%;
+    }
+
+    .info-section {
+      width: 100%;
+    }
+  }
+}
+
+// section {
+//   padding: 120px 5% 0 5%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 40px;
+
+//   .landing-banner {
+//     height: 80vh;
+//     width: 100%;
+//     background: url(https://framerusercontent.com/images/RCSWe5fha9nkNhbxMdNRDCGs4z8.jpg?scale-down-to=2048);
+//     border-radius: 10px;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     border-radius: 10px;
+
+//     .overlay {
+//       height: 100%;
+//       width: 100%;
+//       background: rgba(0, 0, 0, 0.4);
+//       border-radius: 10px;
+//       padding: 40px;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       color: white;
+
+//       .title h3 {
+//         font-size: 32px;
+//         font-weight: 700;
+//         letter-spacing: 2px;
+//         width: 50%;
+//       }
+
+//       .subTitle p {
+//         font-size: 44px;
+//         font-weight: 700;
+//         letter-spacing: 1px;
+//         width: 50%;
+
+//       }
+
+//       @keyframes anim {
+//         to {
+//           transform: scale(0.3);
+//           opacity: 0.3;
+//         }
+//       }
+
+//     }
+//   }
+
+//   .our-work {
+//     background: var(--bg-dark);
+//     border-radius: 10px;
+//     padding: 40px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 40px;
+
+//     &>.title h3 {
+//       font-size: 42px;
+//       font-weight: 700;
+//       letter-spacing: 1px;
+//       opacity: 0.5;
+//       color: #fff;
+//       animation: opacityAnim 1s ease forwards;
+//       animation-timeline: view();
+//       animation-range: entry 0 cover 40%;
+//     }
+
+//     .work-card {
+//       display: flex;
+//       flex-wrap: wrap;
+//       gap: 80px;
+//       animation: gapAnim 1s ease forwards;
+//       animation-timeline: view();
+//       animation-range: entry 0 cover 40%;
+
+//       .wrapper {
+//         width: 350px;
+//         background: var(--bg-light);
+//         padding: 20px;
+//         border-radius: 10px;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 20px;
+
+//         .img-wrapper {
+//           height: 250px;
+//           border-radius: 10px;
+//           overflow: hidden;
+
+//           video {
+//             height: 100%;
+//             width: 100%;
+//             object-fit: cover;
+//           }
+
+//           img {
+//             height: 100%;
+//             width: 100%;
+//             object-fit: cover;
+//           }
+//         }
+
+//         .title {
+//           h3 {
+//             font-size: 24px;
+//             color: var(--bg-dark);
+//             letter-spacing: 1px;
+//             font-weight: 500;
+//             position: relative;
+
+//             &::before {
+//               position: absolute;
+//               content: '';
+//               bottom: 0;
+//               left: 0;
+//               width: 0%;
+//               height: 2px;
+//               background-color: var(--bg-dark);
+//               transition: width 0.5s ease;
+//             }
+
+//             &:hover::before {
+//               width: 20%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   // .about-ceo {
+//   //   display: flex;
+//   //   gap: 40px;
+//   //   align-items: center;
+//   //   background: black;
+//   //   color: white;
+//   //   border-radius: 10px;
+//   //   padding: 40px;
+//   //   margin-bottom: 40px;
+
+//   //   .img {
+//   //     height: 400px;
+//   //     width: 100%;
+//   //     border-radius: 10px;
+//   //     overflow: hidden;
+//   //     animation: slideFromLeft 1s ease forwards;
+//   //     animation-timeline: view();
+//   //     animation-range: entry 0 cover 40%;
+
+//   //     img {
+//   //       height: 100%;
+//   //       width: 100%;
+//   //       object-fit: cover;
+//   //     }
+//   //   }
+
+//   //   .info {
+//   //     animation: blur 0.5s ease forwards;
+//   //     animation-timeline: view();
+//   //     animation-range: entry 0 cover 40%;
+//   //     .title {
+//   //       h3 {
+//   //         font-size: 20px;
+//   //         font-weight: 500;
+//   //         letter-spacing: 1px;
+//   //       }
+//   //     }
+
+//   //     .description {
+//   //       font-weight: 300;
+//   //     }
+
+//   //     .name {
+//   //       font-weight: 500;
+//   //       font-size: 20px;
+//   //     }
+//   //   }
+//   // }
+// }
+
+// @media screen and (max-width: 768px) {
+//   section {
+//     .landing-banner {
+//       .overlay {
+//         padding: 20px;
+
+//         .subTitle {
+//           p {
+//             width: 100%;
+//             font-size: 32px;
+//             font-weight: 700;
+//           }
+//         }
+//       }
+//     }
+
+//     .our-work {
+//       padding: 20px;
+
+//       .work-card {
+//         gap: 4px;
+//         align-items: center;
+//         justify-content: center;
+
+//         .wrapper {
+//           min-width: 300px !important;
+//           max-width: 300px !important;
+//         }
+//       }
+//     }
+
+//     // .about-ceo {
+//     //   padding: 20px;
+//     //   flex-direction: column;
+
+//     //   .img {
+//     //     height: 250px;
+//     //   }
+//     // }
+//   }
+// }

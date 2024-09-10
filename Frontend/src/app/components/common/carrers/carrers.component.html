@@ -1,0 +1,64 @@
+<section class="landing-page-wrapper section-landing-margin">
+  <div class="image-section has-box-shadow">
+    <img src="assets/images/carrers.png" alt="Mindenious Carrers" loading="lazy">
+  </div>
+  <div class="info-section has-box-shadow">
+    <h1>Join Our Team: Shape the Future of Learning and Careers</h1>
+    <p>At Mindenious, we're dedicated to transforming learning experiences and shaping careers. We're looking for
+      passionate individuals to join our team as mentors, HR professionals, and more. As a part of our team, you'll have
+      the opportunity to influence the next generation of learners and professionals. Whether you're driven by
+      innovation, education, or mentorship, Mindenious offers a dynamic environment where your skills and ideas can
+      thrive. Explore our current openings below and embark on a rewarding journey with us.</p>
+    <div class="explore-more">
+      <button class="button" (click)="scrollToCurrentOpenings('currentOpeningId')">Explore openings</button>
+    </div>
+  </div>
+</section>
+
+<!-- Current Openings -->
+<app-current-openings id="currentOpeningId"></app-current-openings>
+
+<!-- <div class="our-work">
+    <div class="title">
+      <h3>See Our Work</h3>
+    </div>
+
+    <div class="work-card">
+      @for (work of ourWork; track $index) {
+      <div class="wrapper" (mouseenter)="video.play()" (mouseleave)="video.load()">
+        <div class="img-wrapper">
+          <video #video muted loop [src]="work.imgSrc"></video>
+        </div>
+        <div class="title">
+          <h3>{{work.title}}</h3>
+        </div>
+        <div class="description">
+          <p>{{work.description}}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <app-service-card [ourServices]="ourServices"></app-service-card> -->
+<!--
+  <div class="about-ceo">
+    <div class="img">
+      <img src="https://framerusercontent.com/images/IVYgTYnwAKMBJvizACEbYRYAQ.png?scale-down-to=512" alt="">
+    </div>
+    <div class="info">
+      <div class="title">
+        <h3>Exceptional Service and Outstanding Results!</h3>
+      </div>
+      <div class="description">
+        <p>I had the privilege of working with [Your Name/Your Company], and I am thrilled with the exceptional service
+          and outstanding results they delivered. Their expertise and dedication are truly remarkable.Their
+          communication throughout the process was impeccable, keeping us informed every step of the way. It's evident
+          that [Your Name/Your Company] takes pride in their work and places a high value on client satisfaction.</p>
+      </div>
+      <hr>
+      <div class="name">
+        <h3>John Doe, <br>Co-Founder and CEO</h3>
+      </div>
+    </div>
+  </div> -->

@@ -1,0 +1,117 @@
+section {
+  padding: 40px 10%;
+
+  .section-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 18%;
+
+    .section-overline {
+      color: var(--text-navy);
+      letter-spacing: 3px;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
+    .section-subtitle {
+      opacity: 0.6;
+      letter-spacing: 1px;
+    }
+
+  }
+
+  .card-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 18%;
+
+    .card-image {
+      height: 320px;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .card-overline {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        opacity: 0.6;
+      }
+
+      .card-title {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .card-subtitle {
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 5%;
+
+    .section-head {
+      padding: 10px;
+
+      .section-overline {
+        font-size: 14px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+    }
+
+    .card-body {
+      flex-direction: column !important;
+      padding: 20px;
+      background: var(--b-light-2);
+      border-radius: 10px;
+      margin-top: 20px;
+
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .card-overline {
+          font-size: 10px;
+        }
+
+        .card-title {
+          font-size: 24px;
+        }
+
+        .card-subtitle {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 769px) and (max-width: 1044px) {}
+
+/* For desktop */
+@media screen and (min-width: 1045px) {}

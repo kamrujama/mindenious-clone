@@ -1,0 +1,153 @@
+.heading {
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+}
+
+.trending-course-header {
+  margin: 120px 10% 40px 10%;
+
+  .content-wrapper {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+    h1 {
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .buttons-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        display: block;
+        padding: 10px 2rem;
+        border-radius: 32px;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 1px;
+        transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: var(--text-orange);
+
+          &:hover {
+            background-color: var(--bg-red);
+          }
+        }
+
+        &:last-child {
+          background-color: var(--bg-primary-1);
+
+          &:hover {
+            background-color: var(--bg-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.connect-with-us {
+  width: 100%;
+  padding: 40px 10%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: var(--bg-primary);
+  color: white;
+  margin: 20px 0;
+
+  .left {
+    h1 {
+      font-size: 44px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .talk-with-us {
+      a {
+        display: block;
+        outline: none;
+        background: white;
+        border: 1px solid gray;
+        border-radius: 32px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transform: background 0.3s, color 0.3s;
+
+        &:hover {
+          background: var(--bg-orange);
+          color: white;
+        }
+      }
+    }
+  }
+
+  .right {
+    height: 200px;
+    width: 300px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trending-course-header {
+    margin: 120px 5% 40px 5%;
+
+    .content-wrapper {
+      h1 {
+        font-size: 44px;
+      }
+
+      .buttons-group {
+        a {
+          padding: 10px 15px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .connect-with-us {
+    flex-direction: column;
+
+    .left {
+      h1 {
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+  }
+}

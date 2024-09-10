@@ -1,0 +1,62 @@
+<section class="trending-course-header">
+  <div class="content-wrapper">
+    <h1>Accelerate your growth with our courses</h1>
+    <p>150+ daily course enrollments!</p>
+    <div class="buttons-group">
+      <a (click)="scrollToTrendingCourse('treding-courses')">Trending Courses</a>
+      <a href="https://wa.me/+917651914183?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services"
+        target="_blank">Talk to us</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Top featured courses -->
+ <app-top-featured-courses></app-top-featured-courses>
+
+
+ <!-- Explore Courses -->
+<section class="trending-courses" id="treding-courses" #tredingCourses>
+  <app-trending-course-lists></app-trending-course-lists >
+  <!-- <div class="heading">
+    <h1>Trending Courses</h1>
+    <p>Choose from 100+ courses with new additions published every month</p>
+  </div>
+  <div class="content-card">
+    <ul class="course-category-wrapper">
+      @for (course of courseCategory; track $index) {
+      <li (click)="toggleProgramSubmenu(course.title, course)" class="course-category-item" [class.active]="course.isExpanded">{{course.title}}</li>
+      }
+    </ul>
+    @if (coursesList.subdomains.length > 0 && coursesList.isExpanded) {
+      <div class="card-wrapper">
+        @for (subdomain of coursesList.subdomains; track $index) {
+        <div class="course-card has-box-shadow">
+          <div class="course-heading">
+            <img [src]="subdomain.courseBgImg" alt="${course.title}">
+          </div>
+          <div class="description">
+            <h1>{{subdomain.courseName}}</h1>
+            <div class="course-footer">
+              <button (click)="navigateToCourse('/course', subdomain)">Explore Now</button>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      }
+  </div> -->
+</section>
+
+<section class="connect-with-us">
+  <div class="left">
+    <h1>Connect with us</h1>
+    <div class="talk-with-us">
+      <a href="https://wa.me/+917651914183?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services"
+      target="_blank">Talk to us</a>
+    </div>
+  </div>
+  <div class="right">
+    <img src="assets/images/discover.png" alt="Mindenious" loading="lazy">
+  </div>
+</section>

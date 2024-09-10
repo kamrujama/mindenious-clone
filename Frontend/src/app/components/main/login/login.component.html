@@ -1,0 +1,54 @@
+<section class="login-section">
+  <div class="overlay"></div>
+  <div class="login-header">
+    <div class="title">
+      <label for="loginBtn" class="login-button" (click)="toggleLogin()" [class.active]="isLogin">Login</label>
+      <label for="loginBtn" class="signup-button" (click)="toggleSignup()" [class.active]="isSignup">Signup</label>
+      <div class="slider"></div>
+    </div>
+    <div class="wrapper">
+      @if(isLogin) {
+        <div class="login-wrapper">
+          <div class="input-fields">
+            <input class="input" type="email" name="email" id="" placeholder="Email">
+            <input class="input" type="password" name="password" id="" placeholder="Password">
+          </div>
+          <div class="forgot-password">
+            <span>Forgot Password?</span>
+          </div>
+          <div class="login-btn">
+            <button class="login" (click)="validateLogin()">Login</button>
+          </div>
+          <div class="alternate-signup">
+            <span>Don't have an account? <a (click)="toggleSignup()">Signup</a></span>
+          </div>
+          <div class="or"><span>Or</span></div>
+          <div class="social-icons">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google"></i></a>
+            <a href=""><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      } @else if(isSignup) {
+        <div class="signup-wrapper" [class.active]="isSignup">
+          <form [formGroup]="signupForm">
+            <div class="input-fields">
+              <input class="input" type="text" formControlName="username" id="" placeholder="Full Name">
+              <input class="input" type="email" formControlName="email" id="" placeholder="Email">
+              <input class="input" type="password" formControlName="password" id="" placeholder="Password">
+            </div>
+            <div class="login-btn">
+              <button class="signup" (click)="validateSignup()">Signup</button>
+            </div>
+          </form>
+          <div class="or"><span>Or</span></div>
+          <div class="social-icons">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-google"></i></a>
+            <a href=""><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

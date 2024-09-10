@@ -1,0 +1,127 @@
+.mentors-wrapper {
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+
+  .content-heading {
+
+    h5 {
+      text-align: center;
+    }
+  }
+
+  .mentors-profile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    // @for $i from 1 through 3 {
+    //   .card-wrapper:nth-child(#{$i}) {
+    //     background-image: url("https://d1vwxdpzbgdqj.cloudfront.net/aiml-pp-new/#{$i}.jpg");
+    //   }
+    // }
+
+    .card-wrapper {
+      background: #00158024;
+      overflow: hidden;
+      height: 300px;
+      width: 280px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 10px;
+      filter: grayscale(1);
+      transition: 0.3s;
+
+      @media screen and (max-width: 768px) {
+        width: 320px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+
+      .mentors-info {
+        position: absolute;
+        bottom: -65px;
+        height: 60px;
+        width: 90%;
+        background: white;
+        border-radius: 10px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+        transition: all 0.2s ease;
+
+        .details {
+          h5 {
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+
+        .link {
+          height: 40px;
+          width: 40px;
+          background: var(--bg-primary);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: inherit;
+
+          a i {
+            color: white;
+          }
+        }
+      }
+
+      &:hover {
+        filter: grayscale(0);
+
+        .mentors-info {
+          bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  .mentors-wrapper {
+    .mentors-profile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mentors-wrapper {
+    .mentors-profile {
+      grid-template-columns: 1fr;
+
+      .card-wrapper {
+        filter: grayscale(0);
+
+        .mentors-info {
+          bottom: 15px;
+        }
+      }
+    }
+  }
+}

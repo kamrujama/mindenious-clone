@@ -1,0 +1,29 @@
+<section class="mentors-wrapper">
+  <div class="content-heading">
+      <h5>Meet the team</h5>
+      <h1 class="heading">Meet our Dedicated Team of Educators and Innovators</h1>
+  </div>
+    <!-- <div class="mentors-count">
+      <app-count-kpi [count]="20" [title]="'Professors'"
+        [icon]="'https://d1vwxdpzbgdqj.cloudfront.net/aiml-pp-new/person-icon.svg'"
+        [iconBgColor]="'rgba(105, 121, 248, .7)'"></app-count-kpi>
+      <app-count-kpi [count]="30" [title]="'Mentors'"
+        [icon]="'https://d1vwxdpzbgdqj.cloudfront.net/aiml-pp-new/people-icon.svg'"></app-count-kpi>
+    </div> -->
+  <div class="mentors-profile">
+    @for (mentor of mentorDetails; track $index) {
+      <div class="card-wrapper">
+        <img src="{{mentor.profileImg}}" alt="{{mentor.name + ' Mindenious'}}}" loading="lazy">
+        <div class="mentors-info">
+          <div class="details">
+            <h5>{{mentor.name}}</h5>
+            <p>{{mentor.occupation}}</p>
+          </div>
+          <div class="link">
+            <a href="{{mentor.profileLink}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

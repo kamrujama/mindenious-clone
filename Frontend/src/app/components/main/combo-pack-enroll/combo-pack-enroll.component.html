@@ -1,0 +1,73 @@
+<section class="combo-pack-wrapper section-landing-margin">
+  <div class="pack-header has-box-shadow">
+    <article class="has-box-shadow">
+      <div class="summary-wrapper">
+        <div class="pack-title">
+          <h1>{{comboPackData?.title}}</h1>
+        </div>
+        <div class="summary-heading">
+          <h1>{{comboPackData?.packDetails?.title}}</h1>
+          <p>{{comboPackData?.packDetails?.description}}</p>
+        </div>
+        <div class="summary-footer">
+          <h1>{{comboPackData?.packDetails?.deliveryMode}}</h1>
+          <ol>
+            @for (mode of comboPackData?.packDetails?.modes; track $index) {
+            <li>{{mode}}</li>
+            }
+          </ol>
+        </div>
+      </div>
+    </article>
+    <div class="pack-image has-box-shadow">
+      <img [src]="comboPackData?.imgSrc" [alt]="comboPackData?.packDetails?.title" >
+    </div>
+  </div>
+</section>
+
+<!-- Why choose us -->
+<app-why-choose-us></app-why-choose-us>
+
+<section class="accordion-wrapper">
+  <div class="section-title section-margin">
+    <h1 class="heading">{{comboPackData?.packDetails?.moduleTitle}}</h1>
+    <p>{{comboPackData?.packDetails?.moduleSummary}}</p>
+  </div>
+  @if (comboPackData?.packDetails?.courseModule.length === 0) {
+    <app-trending-course-lists></app-trending-course-lists>
+  } @else {
+    <app-accordian [accordionData]="comboPackData?.packDetails?.courseModule"></app-accordian>
+  }
+</section>
+
+<section class="enroll-now-wrapper has-box-shadow section-margin">
+  <div class="img-section">
+    <img src="assets/images/joinus.png" alt="Join Us - Mindenious" data-loaded="true" loading="lazy">
+  </div>
+  <div class="info-container">
+    <h1 class="title">Student Success</h1>
+    <div class="payment-mode-wrapper">
+      <h1 class="title">Please select Payment Mode</h1>
+      <div class="buttons">
+        <button class="button" [class]="{active: isPreRegistrationSelected}" (click)="updatePaymentMode('pre')">Pre-registration</button>
+        <button class="button" [class]="{active: !isPreRegistrationSelected}" (click)="updatePaymentMode('full')">Full Payment</button>
+      </div>
+    </div>
+    <div class="payment-details">
+      @if (isPreRegistrationSelected) {
+        <p class="offer-price">₹{{comboPackData.preRegistrationPrice}}</p>
+      } @else {
+        <p class="list-price">₹{{comboPackData.listPrice}}</p>
+        <p class="offer-price">₹{{comboPackData.offerPrice}}</p>
+      }
+      <p class="discount">Get Real Time Assistance</p>
+      <p class="offer-end">Early bird offer ends soon. Only limited seats available</p>
+      <button class="button" (click)="enrollNow()">Enroll Now</button>
+    </div>
+  </div>
+</section>
+
+@if (isEnrolled) {
+    <app-modal-popup (closeModalEvent)="isEnrolled = false" [modalType]="'info'"
+      [modalBody]="'You will receive registration confirmation email after completing your payment. Thank you for enrolling!'"></app-modal-popup>
+}

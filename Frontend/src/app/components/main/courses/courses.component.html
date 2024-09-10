@@ -1,0 +1,303 @@
+<section class="course-banner section-landing-margin">
+  <div class="card-container has-box-shadow">
+    <div class="card-background">
+      <img src="{{courseData[0].courseBgImg}}" alt="{{courseData[0].courseName + ' Mindenious'}}" >
+    </div>
+    <div class="card-content">
+      <h2 class="course-heading has-box-shadow"><span class="pre-course-text">Join our most trending </span><span class="course-name">{{courseData[0].courseName || 'Full Stack Web Development'}}</span><span class="post-course-text"> course</span></h2>
+      <ul class="course-details has-box-shadow">
+        <h4 class="key-benefits">Key Benefits</h4>
+        @for (feature of featuresList; track $index) {
+          <li class="key-lists">
+            <span style="margin-right: 10px;"><i class="fa fa-plus"></i></span>
+            <span>{{feature}}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+<!--
+<section class="review-banner">
+  <div class="container">
+    <div class="card-body">
+      <img class="card-image" src="https://d1vwxdpzbgdqj.cloudfront.net/aiml-pp-new/transition-icon.svg" alt="career">
+      <div class="card-content">
+        <p class="card-heading">96%</p>
+        <p class="card-text">Program Satisfaction</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <img class="card-image" src="https://d1vwxdpzbgdqj.cloudfront.net/home-new-variant/trust-pilot.png" alt="logo">
+      <div class="card-content">
+        <p class="card-heading">4.8/5</p>
+        <p class="card-text">Trustpilot</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <img class="card-image"
+        src="https://d1vwxdpzbgdqj.cloudfront.net/s3-public-images/page-banners/home/course-report.png" alt="logo">
+      <div class="card-content">
+        <p class="card-heading">4.81/5</p>
+        <p class="card-text">Course Report</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- our alumni works at -->
+<app-image-auto-slider></app-image-auto-slider>
+
+<section class="industry-support section-margin">
+  <div class="wrapper has-box-shadow">
+    <div class="section-title">
+      <h1>Get Industry ready with Career Support</h1>
+    </div>
+    <div class="career-outcome">
+      @for (support of industrySupport; track $index) {
+        <div class="card">
+          <img [src]="support.imgSrc" [alt]="support.imgSrc" data-loaded="true" >
+          <h5>{{support.title}}</h5>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Course Modules -->
+<section class="course-module section-margin">
+  <div class="section-title">
+    <h1>Course Modules</h1>
+  </div>
+  <div class="course-accordian">
+    <mat-accordion class="module-accordian">
+      @for (module of courseModule; track $index) {
+      <mat-expansion-panel class="module-wrapper">
+        <mat-expansion-panel-header class="module-title">
+          <mat-panel-title class="title">
+            {{module.title}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="list sub-module">
+          @for (subModule of module.subTitle; track $index) {
+          <li>{{subModule}}</li>
+          }
+        </ul>
+      </mat-expansion-panel>
+      }
+    </mat-accordion>
+  </div>
+</section>
+
+<!-- download Syllabus banner -->
+<!-- <section class="brocher-wrapper section-margin">
+  <div class="banner-wrapper has-box-shadow">
+    <div class="img-wrapper">
+      <img src="assets/images/formBg.png" alt="">
+    </div>
+    <form class="info-fields" #fullSyllabusFormGroup="ngForm" (ngSubmit)="submitFormData(fullSyllabusFormGroup)">
+      <input class="input" type="text" name="name" placeholder="Full name" ngModel required>
+      <input class="input" type="email" name="email" placeholder="E-mail" ngModel required>
+      <input class="input" type="tel" name="phone" placeholder="Phone number" #phoneInput="ngModel" ngModel required>
+      @if (phoneInput.dirty) {
+        <div>
+          @if (phoneInput.hasError('required')) {
+            <small style="color: var(--text-red);">Phone number is required.</small>
+          }
+          @if (!isValidPhone) {
+            <small style="color: var(--text-red);">Phone number must be 10 digits.</small>
+          }
+        </div>
+      }
+      <div class="download-btn">
+        <button class="button" type="submit" [style.min-width]="'220px'">
+          <span>{{loading ? 'Downloading...' : 'Download Full Syllabus'}}</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section> -->
+
+<!-- @if (showAlertModal) {
+  <app-modal-popup [modalDuration]="3000" [modalType]="'success'" [modalBody]="'Downloaded Successfully'"></app-modal-popup>
+} -->
+
+<!-- Languages taught  -->
+<section class="languages-wrapper section-margin">
+  <div class="section-title">
+    <h1>Languages and tools covered</h1>
+  </div>
+  <div class="lang-logos">
+    @for (languages of languages; track $index) {
+    <div class="lng-logo-wrapper">
+      <img class="lng-logo" [src]="languages.src" [alt]="languages.alt" >
+      <!-- <div class="lang">{{languages.lang}}</div> -->
+    </div>
+    }
+  </div>
+</section>
+
+<!-- Projects covered -->
+<section class="projects-wrapper section-margin">
+  <div class="section-title">
+    <h1>Hands-on projects</h1>
+  </div>
+  <div class="projects">
+    <app-count-kpi [count]="courseData[0].miniProject" [title]="'Mini Project'" [duration]="'1 Week'"
+      [icon]="'https://d1vwxdpzbgdqj.cloudfront.net/aiml-pp-new/tools-icon.svg'"
+      [iconBgColor]="'rgba(105, 121, 248, .7)'"></app-count-kpi>
+    <app-count-kpi [duration]="'3 weeks'" [count]="courseData[0].majorProject" [title]="'Major Project'"></app-count-kpi>
+  </div>
+</section>
+
+<!-- payments -->
+<section class="price-plans section-margin">
+  <div class="section-title">
+    <h1>Select your Plan</h1>
+  </div>
+  <div class="price-card-wrapper">
+    @for (plan of pricePlans; track $index) {
+    <div class="price-card">
+      <div class="card-header">
+        <h4>{{plan.title}}</h4>
+        <p>{{plan.subTitle}}</p>
+      </div>
+      <div class="price">
+        <p><span>₹</span>{{plan.price.full}}</p>
+      </div>
+      <div class="features">
+        <ul class="features-list">
+          @for (feature of plan.features; track $index) {
+          <li class="feature">
+            <span class="isAllowed"><i
+                [class]="feature.isAllowed ? 'fa fa-plus' : 'fa fa-minus is-text-danger'"></i></span>
+            <span class="feature-title">{{feature.title}}</span>
+          </li>
+          }
+        </ul>
+      </div>
+
+      <div class="enroll-now">
+        <button (click)="enrollNow(plan.price)">Enroll Now</button>
+      </div>
+    </div>
+    }
+  </div>
+</section>
+
+<!-- payment -->
+@if (showPaymentModal) {
+<section class="payment-section">
+  <div class="payment-wrapper">
+    <!-- <div class="close-modal"><i class="fa fa-times" (click)="closePaymentModal()"></i></div> -->
+    <div class="payment-mode">
+      <label (click)="updatePaymentMode('partial')">Pre-Registration</label>
+      <label (click)="updatePaymentMode('full')">Full Payment</label>
+      <div class="slider" [class.active]="paymentMode === 'full'"></div>
+    </div>
+    <div class="price-section">
+      @if (!isCouponApplied) {
+      <p><span>₹</span>{{paymentMode === 'partial' ? paymentType.partial : paymentType.full}}</p>
+      } @else {
+      <p>
+        <span>₹</span>
+        <span class="striked-price">{{paymentType.full}}</span>
+        <span class="coupon-applied-price">{{priceAfterCouponApplied}}</span>
+      </p>
+      }
+    </div>
+    @if (paymentMode === 'full') {
+    <div class="coupon-wrapper">
+      <div class="coupon-input">
+        <input #couponInputBox class="input" type="text" name="coupon" placeholder="Enter coupon code"
+          [disabled]="isCouponApplied">
+        <button class="button apply-coupon" (click)="applyCoupon()" [disabled]="isCouponApplied">Apply</button>
+      </div>
+      <div class="coupon">
+        <!-- <button class="button use-coupon" (click)="useCoupon()" [disabled]="isCouponUsed">GMT30</button> -->
+        @if(isCouponApplied) {
+        <span class="coupon-applied">Congratulations! Coupon Applied Successfully</span>
+        } @else {
+          <span>Apply a coupon here to get a 30% discount</span>
+        }
+      </div>
+    </div>
+    }
+    <div class="pay-cancel-wrapper">
+      <p class="note">*Payment will be processed once you complete the registration</p>
+      <div class="buttons-wrapper">
+        <div class="pay">
+          <a [href]="isCouponApplied ? paymentType.discountedPaymentLink : paymentMode === 'partial' ? paymentType.preRegistrationPaymentLink : paymentType.fullPaymentLink" target="_blank" (click)="pay()"
+            class="button">Pay Now</a>
+        </div>
+        <div class="cancel">
+          <button class="button" (click)="closePaymentModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if (showCouponAlert) {
+  <app-modal-popup [modalDuration]="3000" [modalType]="'error'"
+    [modalBody]="'Oops! Please enter valid coupon code'"></app-modal-popup>
+  }
+  <!-- info Modal on payment redirect -->
+  @if (isRedirectedToPaymentPage) {
+  <app-modal-popup (closeModalEvent)="closeInfoModal($event)" [modalType]="'info'"
+    [modalBody]="'You will receive registration confirmation email after completing your payment. Thank you for enrolling!'"></app-modal-popup>
+  }
+</section>
+}
+
+<!-- application process -->
+<app-application-process></app-application-process>
+
+<!-- sample certificates section -->
+<section class="certificate-wrapper section-margin">
+  <div class="section-title">
+    <h1>Sample Certificates</h1>
+  </div>
+  <div class="certificate-img">
+    @for (certificate of certificatesData; track $index) {
+      <div class="img-wrapper">
+        <img [src]="certificate.url" [alt]="certificate.title" >
+        <div class="img-overlay" (click)="openCertificate(certificate.url)"><span title="View Sample Certificate"><i class="fa fa-expand" (click)="openCertificate(certificate.url)"></i></span></div>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- View Certificates -->
+@if (showCertificateModal) {
+  <div class="certificate-modal">
+    <div class="body">
+      <div class="header"><span class="close" (click)="closeCertificateModal()" title="Close"><i class="fa fa-times" (click)="closeCertificateModal()"></i></span></div>
+      <img [src]="certificateUrl">
+    </div>
+  </div>
+}
+
+<!-- Our instructor -->
+ <app-mentors-card></app-mentors-card>
+
+ <!-- carrer reviews -->
+  <app-career-reviews></app-career-reviews>
+
+<!-- total rating -->
+<!-- <section class="rating-wrapper">
+  <div>
+    <h3 class="heading">
+      Learner Feedback on Mentorship and PM Support
+    </h3>
+  </div>
+  <div class="total-reviews">
+    <div class="program-name">PG Program in Artificial Intelligence and Machine Learning</div>
+    <div class="ratings">
+      <span class="rating-title"> Learner Satisfaction Rating</span>
+      <span class="stars">
+        <span class="half-star"></span>
+      </span>
+    </div>
+    <div class="overal-reviews">8,651<span>Ratings</span></div>
+  </div>
+</section> -->

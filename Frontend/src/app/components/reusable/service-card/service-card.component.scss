@@ -1,0 +1,134 @@
+.our-service {
+  background: gray;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+
+  .service-title {
+    h3 {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      opacity: 0.5;
+      color: #fff;
+      animation: opacityAnim 1s ease forwards;
+      animation-timeline: view();
+      animation-range: entry 0 cover 40%;
+    }
+  }
+
+  .service-card-wrapper {
+    display: flex;
+    gap: 80px;
+    animation: gapAnim 1s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+
+    .service-card {
+      height: 380px;
+      background: white;
+      width: 270px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 10px;
+
+      .title h3 {
+        font-weight: 500;
+        font-size: 24px;
+      }
+
+      .description.active {
+        font-size: 14px;
+        opacity: 0.8;
+        display: block;
+        animation: scale 0.5s ease forwards;
+      }
+
+      .icon-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+        .icon {
+          height: 100px;
+          width: 100px;
+          background-color: gainsboro;
+
+          &.active {
+            animation: scale 0.5s ease forwards;
+          }
+        }
+
+        .show-btn {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background: black;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-service {
+    padding: 20px;
+    box-sizing: border-box;
+
+    .service-title {
+      padding: 20px 40px;
+    }
+
+    .service-card-wrapper {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      animation: slide 0.2s ease forwards;
+      animation-timeline: scroll();
+      animation-range: entry 0 cover 40%;
+      .service-card {
+        width: 315px !important;
+
+        .icon-wrapper {
+          .icon {
+            height: 150px;
+            width: 150px;
+          }
+
+          .show-btn {
+            height: 50px;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    margin-top: 50px;
+    transform: scale(0.5);
+  }
+
+  to {
+    margin-top: 0;
+    transform: scale(1);
+  }
+}

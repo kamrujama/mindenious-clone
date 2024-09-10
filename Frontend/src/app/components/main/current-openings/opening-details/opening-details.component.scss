@@ -1,0 +1,139 @@
+.opening-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  .details-header {
+    text-align: center;
+
+    h2 {
+      font-size: 44px;
+      font-weight: 500;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+
+      span {
+        padding: 5px 20px;
+        background: var(--b-light-2);
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+
+  }
+
+  @mixin flex() {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  article {
+    h3 {
+      font-weight: 500;
+      background: var(--b-light-2);
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+    ol {
+      li {
+        span {
+          font-weight: 300;
+        }
+
+        .resptitle {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    ul {
+      list-style-type: square;
+
+      li {
+        span {
+          font-weight: 300;
+        }
+      }
+    }
+
+    ol,
+    ul {
+      @include flex;
+      padding-left: 20px;
+    }
+  }
+
+  .joinUs {
+    p {
+      font-weight: 500;
+    }
+  }
+
+  form {
+    background: var(--b-light-2);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+
+    input,
+    textarea,
+    button {
+      border-radius: inherit;
+      width: 35%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    button {
+      background: var(--b-light-1);
+
+      &:hover {
+        color: var(--text-dark);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    textarea {
+      padding: 10px 20px;
+      resize: none;
+      overflow-y: auto;
+    }
+
+    .drop-mail-info {
+      font-weight: 500;
+      color: var(--text-red);
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.title {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: flex-start;
+
+  .icon span{
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+}
+
+.accordion-body {
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  &.expanded {
+    height: auto;
+    max-height: 500px;
+  }
+
+  .course-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    li a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--bg-gray);
+    }
+  }
+
+}

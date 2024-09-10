@@ -1,0 +1,22 @@
+<div class="card-wrapper"
+[style.height]="height"
+[style.width]="width"
+[style.backgroundColor]="bgColor"
+[style.fontSize]="fontSize"
+>
+  <div class="logo">
+    <!-- <img [src]="courseLogo" alt="" /> -->
+    <img [src]="courseBgImg" alt="" />
+  </div>
+  <div class="content-wrapper">
+    <header>
+      <span>{{courseName}}</span>
+    </header>
+    <div class="content">
+      <span>{{courseDuration}}</span>
+    </div>
+    <div class="course-mode-wrapper">
+      <span class="course-mode"><i class="fa fa-laptop" style="margin-right: 5px;"></i><span>{{courseMode}}</span></span>
+    </div>
+  </div>
+</div>

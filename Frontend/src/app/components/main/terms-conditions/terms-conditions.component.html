@@ -1,0 +1,10 @@
+<section class="section-landing-margin">
+  <div class="title">
+    <h1>Our Terms & Conditions</h1>
+    </div>
+  <div class="policy-wrapper">
+    @for (policy of termsAndConditions; track $index) {
+      <app-content-article [title]="policy.title" [content]="policy.content"></app-content-article>
+    }
+  </div>
+</section>

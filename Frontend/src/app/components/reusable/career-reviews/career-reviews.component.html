@@ -1,0 +1,37 @@
+
+<section class="career-review">
+  <div class="career-wrapper">
+    <h3 class="heading">Success Stories</h3>
+
+    <div class="card-wrapper">
+      <div class="slider-wrapper">
+        @for (item of careerData; track $index) {
+        <div class="item has-box-shadow">
+          <div class="learner-cards">
+            <div class="card-header">
+              <div class="image-wrapper">
+                <img alt="learner image" [src]="item.learner.image" width="50" height="50" data-loaded="true">
+              </div>
+              <h1 class="learner-name">{{item.learner.name}}</h1>
+            </div>
+            <div class="card-body">
+              <p>{{item.story}}</p>
+            </div>
+            <div class="rating">
+              @for (i of [1, 2, 3, 4, 5]; track $index) {
+                <i class="fa fa-star" [class.active]="i <= item.rating"></i>
+              }
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <!-- <div class="buttons-wrapper">
+        <button [disabled]="isLeftDisabled" class="prev" (click)="slidePrev()"><span><i
+              class="fa fa-angle-left"></i></span></button>
+        <button [disabled]="isRightDisabled" class="next" (click)="slideNext()"><span><i
+              class="fa fa-angle-right"></i></span></button>
+      </div> -->
+    </div>
+  </div>
+</section>

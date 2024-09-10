@@ -1,0 +1,20 @@
+.company-collaboration-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  .logo-wrapper {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 20px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+  }
+}

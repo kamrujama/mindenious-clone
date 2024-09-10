@@ -1,0 +1,51 @@
+<section class="payment-wrapper">
+  <div class="card-banner"></div>
+  <div class="payment-methods">
+    <div class="amount-mode">
+      <div class="full-payment"><span>Full Payment</span></div>
+      <div class="partial">Partial Payment</div>
+    </div>
+    <div class="credit-debit-card">
+      <span><i class="fa fa-credit-card"></i></span>
+      <span (click)="toggleCreditDebitCard()">Credit/Debit Card</span>
+      @if (isCreditDebitCard) {
+      <div class="card-fields">
+        <form action="">
+          <div class="input-group">
+            <label for="">Card Number</label>
+            <input type="text" placeholder="Card Number" />
+          </div>
+          <div class="expiry">
+            <div class="input-group">
+              <label for="">Expiry</label>
+              <input type="text" placeholder="MM/YY" />
+            </div>
+            <div class="input-group">
+              <label for="">CVV</label>
+              <input type="text" placeholder="CVV" />
+            </div>
+          </div>
+          <div class="input-group ">
+            <label for="">Name</label>
+            <input type="text" name="name" id="" placeholder="Name">
+          </div>
+          <div class="save-card">
+            <input type="checkbox" name="save-card" id="">
+            <label for="save-card">Save this card</label>
+          </div>
+          <button class="proceed-btn">Add Card</button>
+        </form>
+      </div>
+      }
+    </div>
+    @if (!isCreditDebitCard) {
+      <div class="phonepay"><span><i class="fa fa-amazon-pay"></i></span><span>PhonePay</span></div>
+      <div class="net-banking"><span>Net Banking</span></div>
+      <div class="upi"><span><i class="fa fa-google-pay"></i></span><span>G-Pay</span></div>
+      <div class="price">
+        <div class="pay"><span>Pay</span></div>
+        <div class="amount"><span>₹ 1,00,000</span></div>
+      </div>
+    }
+  </div>
+</section>

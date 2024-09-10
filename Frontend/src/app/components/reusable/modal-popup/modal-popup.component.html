@@ -1,0 +1,27 @@
+@if (isModalOpen) {
+<div class="modal-container">
+  <div class="overlay"></div>
+  <div class="modal-wrapper">
+    <div class="modal">
+      <div class="modal-header" [style.background-color]="modalTheme[modalType].bgColor">
+        <div class="modal-icon"><i class="fa {{modalTheme[modalType].icon}}" style="color:#fff;"></i></div>
+        <h3>{{modalType | ToUpperCase}}</h3>
+      </div>
+      @if (modalDuration > 0) {
+      <div class="progress-bar-container">
+        <div class="progress-bar" [style.width.%]="progress" [style.backgroundColor]="modalTheme[modalType].bgColor">
+        </div>
+      </div>
+      }
+      <div class="modal-body">
+        <p>{{modalBody}}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="close-btn button" (click)="closeModal()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+}

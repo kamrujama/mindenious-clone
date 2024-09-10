@@ -1,0 +1,74 @@
+.promotion-wrapper {
+  padding: 0px 10% 40px 10%;
+
+  .banner__outcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: #fff8e5;
+    border-radius: 10px;
+    gap: 30px;
+
+    .banner__outcome-content {
+      display: flex;
+      flex-direction: column;
+      align-items: enter;
+      gap: 20px;
+
+      .banner-outcome__overline {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        letter-spacing: 3px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .banner-outcome__title {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      .banner-outcome__subtitle {
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+    }
+
+    .banner-outcome_cta {
+      padding: 10px 15px;
+      background: black;
+      color: white;
+      border-radius: 5px;
+      display: flex;
+      font-size: 14px;
+      width: 260px;
+      justify-content: space-between;
+      font-weight: 500;
+      letter-spacing: 1px;
+      align-items: center;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .promotion-wrapper {
+    padding: 0px 5% 40px 5%;
+
+    .banner__outcome {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 769px) and (max-width: 1044px) {}
+
+/* For desktop */
+@media screen and (min-width: 1045px) {}

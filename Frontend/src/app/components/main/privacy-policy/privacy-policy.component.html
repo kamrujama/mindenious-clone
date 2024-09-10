@@ -1,0 +1,10 @@
+<section class="section-landing-margin">
+  <div class="title">
+    <h1>Our Privacy Policy</h1>
+  </div>
+  <div class="policy-wrapper">
+    @for (item of privacyPolicy; track $index) {
+      <app-content-article [title]="item.title" [content]="item.content"></app-content-article>
+    }
+  </div>
+</section>

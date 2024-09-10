@@ -1,0 +1,66 @@
+.trending-bar {
+  position: fixed;
+  bottom: 5%;
+  height: 40px;
+  background: #27272a;
+  width: fit-content;
+  right: 25px;
+  border-radius: 32px;
+  transform: translateX(49%) rotate(90deg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+
+  h3 {
+    font-size: 14px;
+
+    .pre-title {
+      display: inline-block;
+    }
+
+    .explore-link {
+      color: var(--text-orange);
+      font-weight: 700;
+      font-size: 18px;
+      margin-left: 10px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .whatsapp-link {
+
+    a {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-green);
+      color: white;
+      border-radius: 50%;
+      margin-left: 20px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 786px) {
+  .trending-bar {
+    bottom: 15%;
+    width: fit-content;
+    right: 45px;
+
+    h3 {
+      .pre-title {
+        display: none;
+      }
+
+      .explore-link {
+        margin-left: 0;
+      }
+    }
+  }
+}

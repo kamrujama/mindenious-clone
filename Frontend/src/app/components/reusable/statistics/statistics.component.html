@@ -1,0 +1,13 @@
+<section class="statistics-wrapper">
+  <app-component-title></app-component-title>
+  <div class="section-body">
+    <ul class="stats-list">
+      @for (item of statisticData; track $index) {
+        <li class="stats-list__item">
+          <p class="stats-list__numbers active-digit">{{item.number}}</p>
+          <p class="stats-list__title">{{item.title}}</p>
+      </li>
+      }
+    </ul>
+  </div>
+</section>

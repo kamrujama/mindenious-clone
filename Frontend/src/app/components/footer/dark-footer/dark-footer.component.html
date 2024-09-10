@@ -1,0 +1,151 @@
+<section class="footer">
+  <!-- footer header -->
+  <!-- <div class="footer-header">
+    <div class="logo-address-container">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Mindenious">
+      </div>
+    </div>
+    <div class="social-links">
+      <h3>Find Us on Social</h3>
+      <div class="social-icons">
+        @for (socialLink of socialLinks; track $index) {
+        <div class="icon">
+          <a [href]="socialLink.link" [title]="socialLink.title" target="_blank"><i class="{{socialLink.icon}}"></i></a>
+        </div>
+        }
+      </div>
+    </div>
+  </div> -->
+
+  <!-- footer links -->
+  <div class="footer-links">
+
+    <!-- Newsletter subscribe -->
+    <div class="newsletter-subscribe">
+      <h3>Join Our weekly newsletter</h3>
+      <form #sheetForm="ngForm" method="POST" class="input-wrapper" (ngSubmit)="subscribe(sheetForm)">
+        <input class="input" type="text" name="email" placeholder="Email" ngModel required>
+        <button class="button" type="submit">
+          {{loading ? 'Loading...' : 'Subscribe'}}
+        </button>
+      </form>
+      <p>
+        Join our vibrant community and never miss out on the latest updates, exclusive offers, and insightful content.
+      </p>
+
+      <!-- address -->
+      <div class="address">
+        <h5>Address</h5>
+        <p>
+          No 235, Binnamangala, 13h Cross Road, Indiranagar 2nd Stage, Bangalore -560038
+        </p>
+      </div>
+
+      <div class="mobile-contact-info">
+        <p><span>E-mail:</span><span>{{'support@mindenious.com'}}</span></p>
+        <p><span>Phone:</span><span>+91 9036584096</span></p>
+      </div>
+
+      <!-- social links -->
+      <div class="social-links">
+        <h3>Find Us on Social</h3>
+        <div class="social-icons">
+          @for (socialLink of socialLinks; track $index) {
+          <div class="icon">
+            <a [href]="socialLink.link" [title]="socialLink.title" target="_blank"><i class="{{socialLink.icon}}"></i></a>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- links -->
+    <div class="links">
+
+      <!-- Tech Courses Starts -->
+      <div class="tech-courses">
+        <h3>Tech Courses</h3>
+        <ul class="course-list-container">
+          @for (course of techCourses; track $index) {
+          <li><a (click)="navigateToCourse('/course', course)"
+              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+          }
+        </ul>
+      </div>
+
+      <!-- mobile accordion -->
+      <app-custom-accordion [title]="'Tech Courses'" class="mobile-accordion">
+        <ul class="course-list-container">
+          @for (course of techCourses; track $index) {
+          <li><a (click)="navigateToCourse('/course', course)"
+              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+          }
+        </ul>
+      </app-custom-accordion>
+      <!-- Tech Courses Ends here -->
+
+      <!-- Non Technical Starts -->
+      <div class="non-tech-courses">
+        <h3>Non-Tech Courses</h3>
+        <ul class="course-list-container">
+          @for (course of nonTechCourses; track $index) {
+          <li><a (click)="navigateToCourse('/course', course)"
+              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+          }
+        </ul>
+      </div>
+
+      <!-- mobile accordion -->
+      <app-custom-accordion [title]="'Non-Tech Courses'" class="mobile-accordion">
+        <ul class="course-list-container">
+          @for (course of nonTechCourses; track $index) {
+          <li><a (click)="navigateToCourse('/course', course)"
+              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+          }
+        </ul>
+      </app-custom-accordion>
+      <!-- Non Technical Ends here -->
+
+      <!-- Useful Links Starts Here -->
+      <div class="useful-links">
+        <h3>Useful Links</h3>
+        <ul class="course-list-container">
+          @for (link of usefullLinks; track $index) {
+          <li><a (click)="navigateTo(link.routePath)" routerLinkActive="router-link-active">{{link.name}}</a></li>
+          }
+        </ul>
+        <div class="contact-info">
+          <p><span>E-mail:</span><span>{{'support@mindenious.com'}}</span></p>
+          <p><span>Phone:</span><span>+91 9036584096</span></p>
+        </div>
+      </div>
+      <!-- mobile accordion -->
+      <app-custom-accordion [title]="'Usefull Links'" class="mobile-accordion">
+        <ul class="course-list-container">
+          @for (link of usefullLinks; track $index) {
+          <li><a (click)="navigateTo(link.routePath)" routerLinkActive="router-link-active">{{link.name}}</a></li>
+          }
+        </ul>
+      </app-custom-accordion>
+
+      <!-- <div class="contact-info">
+        <p>E-mail: support@mindenious.com</p>
+        <p>Phone: +91 9036584096</p>
+      </div> -->
+      <!-- Useful Links Ends Here -->
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-copyright">
+    <p class="copyright">© 2024 Mindenious. All rights reserved.</p>
+  </div>
+
+  <!-- Payment options provided -->
+  <div class="payment-options">
+    <p>100% Safe and Secure Payments with </p>
+    <img src="assets/images/Razorpay.png" alt="Payment options - Mindenious" loading="lazy">
+  </div>
+</section>
