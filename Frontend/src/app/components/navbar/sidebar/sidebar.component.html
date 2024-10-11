@@ -27,10 +27,12 @@
             <div class="mega-sub-menu">
               <ul class="program-category">
                 @for(subdomain of domain.subdomains; track subdomain.courseName) {
-                  <li>
-                    <app-course-card [courseName]="subdomain.courseName" [courseBgImg]="subdomain.courseBgImg" [height]="'60px'" [width]="'100%'"
-                      (click)="navigateToCourse('/course', subdomain)"></app-course-card>
-                  </li>
+                  @if (!subdomain?.isHidden) {
+                    <li>
+                      <app-course-card [courseName]="subdomain.courseName" [courseBgImg]="subdomain.courseBgImg" [height]="'60px'" [width]="'100%'"
+                        (click)="navigateToCourse('/course', subdomain)"></app-course-card>
+                    </li>
+                  }
                 }
               </ul>
             </div>

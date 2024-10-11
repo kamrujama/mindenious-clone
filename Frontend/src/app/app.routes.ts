@@ -63,17 +63,8 @@ export const routes: Routes = [
       description: 'Get in touch with Mindenious Edutech for any inquiries, support, or partnership opportunities.'
     }
   },
-  // {
-  //   path: 'course/:id',
-  //   component: CoursesComponent,
-  //   canActivate: [MetaGaurd],
-  //   data: {
-  //     title: 'Course Details - Mindenious Edutech',
-  //     description: 'Discover the details of our top-rated courses designed to enhance your skills and career prospects.'
-  //   }
-  // },
   {
-    path: 'course/:courseName',
+    path: 'course/:id',
     component: CoursesComponent,
     canActivate: [MetaGaurd],
     data: {

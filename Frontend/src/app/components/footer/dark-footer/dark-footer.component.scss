@@ -149,27 +149,6 @@
         color: var(--bg-gray);
       }
 
-      .mobile-contact-info {
-        display: none;
-
-        @media screen and (max-width: 768px) {
-          display: block;
-        }
-
-        p {
-          span {
-            font-size: 14px;
-            font-weight: 300;
-            color: var(--text-white);
-          }
-
-          span:nth-child(1) {
-            font-weight: 500;
-            margin-right: 5px;
-          }
-        }
-      }
-
       .social-links {
         display: flex;
         gap: 40px;
@@ -227,6 +206,34 @@
               }
             }
 
+          }
+        }
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          cursor: pointer;
+          user-select: text;
+
+          span {
+            color: var(--text-white);
+            font-weight: 500;
+          }
+
+          .icon {
+            height: 30px;
+            width: 30px;
+            background: var(--bg-gray);
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
           }
         }
       }
@@ -297,21 +304,6 @@
             }
           }
         }
-
-        .contact-info {
-          p {
-            span {
-              font-size: 14px;
-              font-weight: 300;
-              color: var(--text-white);
-            }
-
-            span:nth-child(1) {
-              font-weight: 500;
-            }
-          }
-        }
-
       }
 
     }

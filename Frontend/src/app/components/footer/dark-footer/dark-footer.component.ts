@@ -5,6 +5,7 @@ import { FormsServices } from '../../../services/forms.service';
 import { NavbarService } from '../../../services/header/navbar.service';
 import { TechnicalCourses, NonTechnicalCourses } from '../../../../../data';
 import { CustomAccordionComponent } from '../../reusable/custom-accordion/custom-accordion.component';
+import { environment } from '../../../../environment';
 
 @Component({
   selector: 'app-dark-footer',
@@ -18,7 +19,7 @@ import { CustomAccordionComponent } from '../../reusable/custom-accordion/custom
   styleUrl: './dark-footer.component.scss'
 })
 export class DarkFooterComponent {
-
+  appVersion = environment.version;
   loading:boolean = false;
   socialLinks = [
     {

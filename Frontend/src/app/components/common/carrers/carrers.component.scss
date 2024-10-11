@@ -1,12 +1,22 @@
 .landing-page-wrapper {
   display: flex;
   gap: 20px;
-  height: 80vh;
-  animation: scale 0.5s ease-in-out;
+  min-height: 80vh;
+  max-height: fit-content;
+  animation: scale 0.3s ease-in-out;
+
+  @media screen and (width > 768px) and (width < 1500px) {
+    flex-direction: column;
+    height: 100%;
+  }
 
   .image-section {
     height: 100%;
     width: 50%;
+
+    @media screen and (width > 768px) and (width < 1500px) {
+      width: 100%;
+    }
 
     img {
       height: 100%;
@@ -22,6 +32,10 @@
     flex-direction: column;
     gap: 20px;
 
+    @media screen and (width > 768px) and (width < 1500px) {
+      width: 100%;
+    }
+
     h1 {
       font-size: 44px;
       font-weight: 700;
@@ -31,6 +45,10 @@
       }
     }
   }
+}
+
+.current-opening-wrapper {
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {
@@ -171,7 +189,7 @@
 //               width: 0%;
 //               height: 2px;
 //               background-color: var(--bg-dark);
-//               transition: width 0.5s ease;
+//               transition: width 0.3s ease;
 //             }
 
 //             &:hover::before {
@@ -210,7 +228,7 @@
 //   //   }
 
 //   //   .info {
-//   //     animation: blur 0.5s ease forwards;
+//   //     animation: blur 0.3s ease forwards;
 //   //     animation-timeline: view();
 //   //     animation-range: entry 0 cover 40%;
 //   //     .title {

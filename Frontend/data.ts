@@ -1,7 +1,7 @@
 let srcLocation = "assets/images/tools/";
 let bgSrcLocation = "assets/images/courseCategories/";
 
-function getImageLocation(img:string) {
+function getImageLocation(img: string) {
   return srcLocation + img + ".png";
 }
 
@@ -524,8 +524,8 @@ export const ComboPackOffers = [
     offerPrice: '9,999/-',
     preRegistrationPrice: '1,999',
     imgSrc: 'assets/images/industry_support/TechPack.png',
-    preRegistrationPaymentLink: 'https://rzp.io/l/ComboPacks-PreRegistration',
-    fullPaymentLink: 'https://pages.razorpay.com/TechPack-FullRegistration',
+    preRegistrationPaymentLink: 'https://rzp.io/l/ComboPacksPreRegistration',
+    fullPaymentLink: 'https://rzp.io/l/TechPackFullRegistration',
     features: [
       'Over 10 Tech Domains',
       'Embark on an Engaging Tech Journey',
@@ -547,72 +547,52 @@ export const ComboPackOffers = [
       courseModule: [
         {
           title: 'Web Development',
-          subTitle: [
-            'In this program, you will be guided through the journey of becoming a successful web developer, starting from foundational skills to advanced expertise. For more detailed curriculum information, please click on the following link.'
-          ],
+          description: 'In this program, you will be guided through the journey of becoming a successful web developer, starting from foundational skills to advanced expertise. For more detailed curriculum information, please click on the following link.',
           courseId: 1,
         },
         {
           title: 'Android App Development',
-          subTitle: [
-            'This program guides you through the journey of becoming a successful Android app developer, starting with foundational skills and progressing to advanced expertise. For more detailed curriculum information, please click on the following link:'
-          ],
+          description: 'This program guides you through the journey of becoming a successful Android app developer, starting with foundational skills and progressing to advanced expertise. For more detailed curriculum information, please click on the following link:',
           courseId: 2,
         },
         {
           title: 'Artificial Intelligence',
-          subTitle: [
-            'This program explores the vast field of artificial intelligence, covering foundational concepts and advanced techniques. It aims to equip learners with the skills and knowledge needed to understand and implement AI solutions. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program explores the vast field of artificial intelligence, covering foundational concepts and advanced techniques. It aims to equip learners with the skills and knowledge needed to understand and implement AI solutions. For more detailed curriculum information, please click on the following link',
           courseId: 3,
         },
         {
           title: 'Data Science',
-          subTitle: [
-            'This program covers essential skills in data analysis, machine learning, and statistical modeling, preparing learners for roles in extracting insights from data. It includes both foundational and advanced topics to build comprehensive expertise. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program covers essential skills in data analysis, machine learning, and statistical modeling, preparing learners for roles in extracting insights from data. It includes both foundational and advanced topics to build comprehensive expertise. For more detailed curriculum information, please click on the following link',
           courseId: 5,
         },
         {
           title: 'Machine Learning',
-          subTitle: [
-            'This program delves into the principles and techniques of machine learning, equipping learners with the skills to develop and deploy predictive models. It covers foundational algorithms, deep learning, and practical applications in various domains. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program delves into the principles and techniques of machine learning, equipping learners with the skills to develop and deploy predictive models. It covers foundational algorithms, deep learning, and practical applications in various domains. For more detailed curriculum information, please click on the following link',
           courseId: 4,
         },
         {
           title: 'Cyber Security',
-          subTitle: [
-            'This program focuses on the fundamentals and advanced aspects of cyber security, preparing participants to protect digital assets and mitigate threats. Topics include network security, cryptography, ethical hacking, and incident response. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program focuses on the fundamentals and advanced aspects of cyber security, preparing participants to protect digital assets and mitigate threats. Topics include network security, cryptography, ethical hacking, and incident response. For more detailed curriculum information, please click on the following link',
           courseId: 6,
         },
         {
           title: 'Cloud Computing',
-          subTitle: [
-            'This program explores the principles and practices of cloud computing, covering essential topics such as cloud architecture, virtualization, storage, and deployment models. It equips learners with the skills needed to design, implement, and manage cloud-based solutions effectively. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program explores the principles and practices of cloud computing, covering essential topics such as cloud architecture, virtualization, storage, and deployment models. It equips learners with the skills needed to design, implement, and manage cloud-based solutions effectively. For more detailed curriculum information, please click on the following link',
           courseId: 8,
         },
         {
           title: 'Embedded Systems',
-          subTitle: [
-            'This program focuses on the design and development of embedded systems, covering hardware and software integration, real-time operating systems, microcontroller programming, and sensor interfacing. It prepares learners to create efficient and reliable embedded solutions for various applications. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program focuses on the design and development of embedded systems, covering hardware and software integration, real-time operating systems, microcontroller programming, and sensor interfacing. It prepares learners to create efficient and reliable embedded solutions for various applications. For more detailed curriculum information, please click on the following link',
           courseId: 0,
         },
         {
           title: 'IoT & Robotics',
-          subTitle: [
-            'This program explores the integration of Internet of Things (IoT) devices with robotics, covering topics such as sensor networks, control systems, machine learning for robotics, and cloud connectivity. It equips learners with the skills to design and implement intelligent robotic systems that leverage IoT technologies. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program explores the integration of Internet of Things (IoT) devices with robotics, covering topics such as sensor networks, control systems, machine learning for robotics, and cloud connectivity. It equips learners with the skills to design and implement intelligent robotic systems that leverage IoT technologies. For more detailed curriculum information, please click on the following link',
           courseId: 7,
         },
         {
           title: 'AutoCAD',
-          subTitle: [
-            'This program provides comprehensive training in AutoCAD, focusing on computer-aided design (CAD) fundamentals, 2D and 3D drafting techniques, and advanced modeling tools. It prepares learners to create detailed technical drawings and designs efficiently. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program provides comprehensive training in AutoCAD, focusing on computer-aided design (CAD) fundamentals, 2D and 3D drafting techniques, and advanced modeling tools. It prepares learners to create detailed technical drawings and designs efficiently. For more detailed curriculum information, please click on the following link',
           courseId: 10,
         }
       ],
@@ -625,8 +605,8 @@ export const ComboPackOffers = [
     offerPrice: '7,999/-',
     preRegistrationPrice: '1,999',
     imgSrc: 'assets/images/industry_support/ownPack.png',
-    preRegistrationPaymentLink: 'https://rzp.io/l/ComboPacks-PreRegistration',
-    fullPaymentLink: 'https://pages.razorpay.com/MakeYourOwnPack-FullRegist',
+    preRegistrationPaymentLink: 'https://rzp.io/l/ComboPacksPreRegistration',
+    fullPaymentLink: 'https://rzp.io/l/MakeYourOwnPackFullRegist',
     features: [
       'Select any 4',
       'Students have the option to choose any 4 random domains available on Mindenious',
@@ -652,8 +632,8 @@ export const ComboPackOffers = [
     offerPrice: '8,999/-',
     preRegistrationPrice: '1,999',
     imgSrc: 'assets/images/industry_support/MBALite.png',
-    preRegistrationPaymentLink: 'https://rzp.io/l/ComboPacks-PreRegistration',
-    fullPaymentLink: 'https://pages.razorpay.com/MBA-Lite-FullRegistration',
+    preRegistrationPaymentLink: 'https://rzp.io/l/ComboPacksPreRegistration',
+    fullPaymentLink: 'https://rzp.io/l/MBA-LiteFullRegistration',
     features: [
       'Over 5 Business Domains',
       'Dive into Live Business Wisdom',
@@ -675,37 +655,27 @@ export const ComboPackOffers = [
       courseModule: [
         {
           title: 'Digital Marketing',
-          subTitle: [
-            'This program covers the essential strategies and tools for effective digital marketing, including SEO, content marketing, social media, email marketing, and analytics. It equips learners with the skills needed to create and manage successful digital marketing campaigns. For more detailed curriculum information, please click on the following link'
-          ],
+          description: 'This program covers the essential strategies and tools for effective digital marketing, including SEO, content marketing, social media, email marketing, and analytics. It equips learners with the skills needed to create and manage successful digital marketing campaigns. For more detailed curriculum information, please click on the following link',
           courseId: 11,
         },
         {
           title: 'Finance',
-          subTitle: [
-            'This program provides a comprehensive understanding of financial principles, including financial analysis, investment strategies, risk management, and corporate finance. It prepares learners to make informed financial decisions and manage financial resources effectively. For more detailed curriculum information, please click on the following link.'
-          ],
+          description: 'This program provides a comprehensive understanding of financial principles, including financial analysis, investment strategies, risk management, and corporate finance. It prepares learners to make informed financial decisions and manage financial resources effectively. For more detailed curriculum information, please click on the following link.',
           courseId: 12,
         },
         {
           title: 'Human Resource',
-          subTitle: [
-            'This program covers the key aspects of human resource management, including recruitment, employee relations, performance management, and organizational development. It equips learners with the skills needed to manage and develop an effective workforce. For more detailed curriculum information, please click on the following link.'
-          ],
+          description: 'This program covers the key aspects of human resource management, including recruitment, employee relations, performance management, and organizational development. It equips learners with the skills needed to manage and develop an effective workforce. For more detailed curriculum information, please click on the following link.',
           courseId: 13,
         },
         {
           title: 'Stock Market',
-          subTitle: [
-            'This program provides in-depth knowledge of stock market operations, including trading strategies, market analysis, portfolio management, and risk assessment. It prepares learners to navigate and invest effectively in the stock market. For more detailed curriculum information, please click on the following link.'
-          ],
+          description: 'This program provides in-depth knowledge of stock market operations, including trading strategies, market analysis, portfolio management, and risk assessment. It prepares learners to navigate and invest effectively in the stock market. For more detailed curriculum information, please click on the following link.',
           courseId: 14,
         },
         {
           title: 'Marketing and Sales',
-          subTitle: [
-            'This program combines essential marketing strategies with sales techniques, covering topics such as market research, consumer behavior, branding, sales management, and negotiation skills. It equips learners with the knowledge and skills to create effective marketing campaigns and drive sales growth. For more detailed curriculum information, please click on the following link.'
-          ],
+          description: 'This program combines essential marketing strategies with sales techniques, covering topics such as market research, consumer behavior, branding, sales management, and negotiation skills. It equips learners with the knowledge and skills to create effective marketing campaigns and drive sales growth. For more detailed curriculum information, please click on the following link.',
           courseId: 0,
         },
       ],
@@ -758,10 +728,10 @@ export const PricePlans = [
     subTitle: 'Learn at your own pace',
     price: {
       'partial': '999',
-      preRegistrationPaymentLink: 'https://rzp.io/l/SelfPaced-Slot-Book',
+      preRegistrationPaymentLink: 'https://pages.razorpay.com/SelfPaced-SlotBook',
       'full': '7142',
-      discountedPaymentLink: 'https://rzp.io/l/SelfPaced-Full-Registration',
-      fullPaymentLink: 'https://rzp.io/l/SelfPacedWithoutDiscount'
+      discountedPaymentLink: 'https://rzp.io/l/SelfPaced-FullRegistration',
+      fullPaymentLink: 'https://rzp.io/l/SelfPaced-WithoutDiscount'
     },
     features: [
       { title: 'Recorded Sessions', isAllowed: true },
@@ -780,10 +750,10 @@ export const PricePlans = [
     subTitle: 'Guided learning with mentor support',
     price: {
       'partial': '999',
-      preRegistrationPaymentLink: 'https://rzp.io/l/MentorLead-Slot-Book',
+      preRegistrationPaymentLink: 'https://rzp.io/l/MentorLead-SlotBook',
       'full': '8570',
-      discountedPaymentLink: 'https://rzp.io/l/MentorLead-Full-Registration',
-      fullPaymentLink: 'https://rzp.io/l/MentorLedWithoutDiscount'
+      discountedPaymentLink: 'https://rzp.io/l/MentorLead-FullRegistration',
+      fullPaymentLink: 'https://rzp.io/l/MentorLed-WithoutDiscount'
     },
     features: [
       { title: 'Recorded Sessions', isAllowed: true },
@@ -802,10 +772,10 @@ export const PricePlans = [
     subTitle: 'Be placement ready',
     price: {
       'partial': '1999',
-      preRegistrationPaymentLink: 'https://rzp.io/l/ProfessionalPreRegLink',
+      preRegistrationPaymentLink: 'https://rzp.io/l/Professional-PreRegLink',
       'full': '14285',
-      discountedPaymentLink: 'https://rzp.io/l/ProfessionalFull-Registration',
-      fullPaymentLink: 'https://rzp.io/l/ProfessionalFullwithoutDico'
+      discountedPaymentLink: 'https://rzp.io/l/ProfessionalFullRegistration',
+      fullPaymentLink: 'https://rzp.io/l/ProfessionalFullwithoutDicount'
     },
     features: [
       { title: 'Recorded Sessions', isAllowed: true },
@@ -820,6 +790,656 @@ export const PricePlans = [
     ]
   }
 ];
+
+export const FAQs = [
+  {
+    title: 'How can I join live classes?',
+    description: 'The class link will be sent to your registered email/WhatsApp. Sessions will take place on the Zoom/LMS platform.'
+  },
+  {
+    title: 'What should I do if I don’t receive the class link?',
+    description: `Please check your spam or junk folder first. If you still can't find the link, feel free to contact us via email at support@mindenious.com or call us at +91 9036584096.`
+  },
+  {
+    title: 'How do I access my LMS portal?',
+    description: 'You will receive access to the LMS portal during the first week of the starting month. To create your account, just follow the instructions sent to you via email/WhatsApp.'
+  },
+  {
+    title: 'How do I submit my projects?',
+    description: 'You will receive an email about your project submission. Click on the "Submit Project" button in the email, which will redirect you to a page where you can upload your project as a PDF file or provide a drive link.'
+  },
+  {
+    title: 'Will I have access to the recorded sessions I missed?',
+    description: 'Yes, you can access the recorded sessions you missed. Just log in to the LMS portal, go to the menu section, and then to the dashboard where you will find the recorded sessions.'
+  },
+  {
+    title: 'Who would be the mentors of our programs?',
+    description: 'You will be mentored by top professionals from leading MNCs who will provide you with exceptional training, a valuable learning experience, and industry insights.'
+  },
+  {
+    title: 'When will I get my certificate?',
+    description: 'You will receive your completion certificate after finishing the course and submitting your projects.'
+  },
+]
+
+export const TrendingCourses = [
+  {
+    "id": 3,
+    "courseName": "Artificial Intelligence",
+    "courseBgImg": bgSrcLocation + "ai" + "/bg.png",
+    "pdfLink": bgSrcLocation + "ai" + "/syllabus.pdf",
+    "courseDuration": "2-3 Months",
+    "courseMode": "Live",
+    "courseModule": [
+      {
+        title: 'Module 1: Introduction to Artificial Intelligence (2 hours)',
+        subTitle: [
+          'Overview of AI and its applications',
+          'History and evolution of AI',
+          'Key concepts: Machine Learning, Deep Learning, Neural Networks',
+          'AI tools and platforms',
+        ]
+      },
+      {
+        title: 'Module 2: Python for AI (2 hours)',
+        subTitle: [
+          'Introduction to Python programming',
+          'Essential Python libraries for AI: NumPy, Pandas, Matplotlib',
+          'Basic data manipulation and visualization',
+        ]
+      },
+      {
+        title: 'Module 3: Machine Learning Basics (2 hours)',
+        subTitle: [
+          'Introduction to Machine Learning',
+          'Types of Machine Learning: Supervised, Unsupervised, Reinforcement Learning',
+          'Key concepts: datasets, features, labels, training and testing sets',
+          'Linear regression and classification',
+        ]
+      },
+      {
+        title: 'Module 4: Supervised Learning (2 hours)',
+        subTitle: [
+          'Decision Trees and Random Forests',
+          'Support Vector Machines (SVM)',
+          'Model evaluation: accuracy, precision, recall, F1 score',
+          'Hands-on: Building and evaluating models',
+        ]
+      },
+      {
+        title: 'Module 5: Unsupervised Learning (2 hours)',
+        subTitle: [
+          'Clustering algorithms: K-Means, Hierarchical Clustering',
+          'Dimensionality reduction: PCA, t-SNE',
+          'Applications of unsupervised learning',
+          'Hands-on: Implementing clustering algorithms',
+        ]
+      },
+      {
+        title: 'Module 6: Neural Networks and Deep Learning (2 hours)',
+        subTitle: [
+          'Introduction to neural networks',
+          'Activation functions, forward and backward propagation',
+          'Introduction to Deep Learning: CNNs, RNNs',
+          'Hands-on: Building a simple neural network',
+        ]
+      },
+      {
+        title: 'Module 7: Natural Language Processing (2 hours)',
+        subTitle: [
+          'Introduction to NLP',
+          'Text preprocessing: tokenization, stemming, lemmatization',
+          'Sentiment analysis and text classification',
+          'Hands-on: Implementing a simple NLP model',
+        ]
+      },
+      {
+        title: 'Module 8: AI Ethics and Bias (2 hours)',
+        subTitle: [
+          'Ethical considerations in AI',
+          'Bias and fairness in AI models',
+          'Responsible AI development',
+          'Case studies and best practices',
+        ]
+      },
+      {
+        title: 'Module 9: AI in Practice (2 hours)',
+        subTitle: [
+          'AI applications in different industries: healthcare, finance, entertainment, etc.',
+          'AI project lifecycle: problem definition, data collection, model development, deployment',
+          'Hands-on: Developing a small AI project',
+        ]
+      },
+      {
+        title: 'Module 10: Future of AI and Final Review (2 hours)',
+        subTitle: [
+          'Emerging trends and technologies in AI',
+          'Future challenges and opportunities',
+          'Final project presentation and review',
+          'Q&A and troubleshooting',
+        ]
+      },
+      {
+        title: 'Additional Resources',
+        subTitle: [
+          'Assignments: Small exercises after each module',
+          'Project:  One mini and one major projects to be completed by the end of the course',
+          'Reference Materials: Links to documentation, tutorials, and further reading',
+        ]
+      },
+      {
+        title: 'Evaluation',
+        subTitle: [
+          'Quizzes: Short quizzes after each module to reinforce learning',
+          'Project Evaluation: Feedback on the final project to assess understanding and application of concepts',
+        ]
+      },
+    ],
+    "languagesCovered": [
+      {
+        src: srcLocation + "python" + ".png",
+        alt: "Python",
+        lang: "Python"
+      },
+      {
+        src: srcLocation + "numpy" + ".png",
+        alt: "NumPy",
+        lang: "NumPy"
+      },
+      {
+        src: srcLocation + "opencv" + ".png",
+        alt: "OpenCV",
+        lang: "OpenCV"
+      },
+      {
+        src: srcLocation + "pandas" + ".png",
+        alt: "Pandas",
+        lang: "Pandas"
+      },
+      {
+        src: srcLocation + "matplotlib" + ".png",
+        alt: "Matplotlib",
+        lang: "Matplotlib"
+      },
+      {
+        src: srcLocation + "scikit" + ".png",
+        alt: "Scikit-learn",
+        lang: "Scikit-learn"
+      },
+      {
+        src: srcLocation + "tensorflow" + ".png",
+        alt: "Tensor Flow",
+        lang: "Tensor Flow"
+      },
+      {
+        src: srcLocation + "pytorch" + ".png",
+        alt: "PyTorch",
+        lang: "PyTorch"
+      },
+    ],
+    "projectCovered": "2",
+    "miniProject": "1",
+    "majorProject": "1",
+  },
+  {
+    "id": 5,
+    "courseName": "Data Science",
+    "courseBgImg": bgSrcLocation + "data_science" + "/bg.png",
+    "pdfLink": bgSrcLocation + "data_science" + "/syllabus.pdf",
+    "description": "This course will help you learn how to use data and statistical models to make predictions, communicate your findings with a broad range of audiences.",
+    "courseModule": [
+      {
+        title: 'Introduction to Data Science',
+        subTitle: [
+          'What is data science? Why is it important?',
+          'Environmental Setup',
+          'Python Basics',
+          'Fundamentals of Python',
+          'Python Data types',
+          'Loops and Functions',
+          'Numerical computing with Numpy',
+          'Data manipulation using Pandas',
+        ]
+      },
+      {
+        title: 'Data Science and Analytics',
+        subTitle: [
+          'Data and its various classifications: Continuous & Discrete, Structured vs Unstructured',
+          'Mathematics   for Data Science (Probability, Statistics,  Linear Algebra, Gradient Descent, calculus)',
+        ]
+      },
+      {
+        title: 'Machine Learning',
+        subTitle: [
+          'Forecasting and prediction using regression',
+          'Linear Regression',
+          'Logistic Regression',
+        ]
+      },
+      {
+        title: 'Data Analysis with Python',
+        subTitle: [
+          'Cleaning Data',
+          'Data Manipulation',
+          'Summarizing Data',
+        ]
+      },
+      {
+        title: 'Machine Learning implementation',
+        subTitle: [
+          'Implementation of Algorithms',
+          'Analysis and evaluation',
+          'Deploying/  Serving the model',
+        ]
+      },
+      {
+        title: 'Tools for Data Science',
+        subTitle: [
+          'Jupyter Notebook',
+          'Jupyter Labs',
+          'Github',
+        ]
+      },
+    ],
+
+    "languagesCovered": [
+      {
+        src: "/assets/ml/lngs/Python.webp",
+        alt: "Python",
+        lang: "Python"
+      },
+      {
+        src: "/assets/ml/lngs/logoAzureSql.webp",
+        alt: "Azure",
+        lang: "Azure"
+      },
+      {
+        src: "/assets/ml/lngs/excell.webp",
+        alt: "Excell",
+        lang: "Excell"
+      },
+      {
+        src: "/assets/ml/lngs/MatPlotlib.webp",
+        alt: "MatPlotlib",
+        lang: "MatPlotlib"
+      },
+      {
+        src: "/assets/ml/lngs/NumPy.webp",
+        alt: "NumPy",
+        lang: "NumPy"
+      },
+      {
+        src: "/assets/ml/lngs/Pandas.webp",
+        alt: "Pandas",
+        lang: "Pandas"
+      }
+    ],
+
+    "projectCovered": "2",
+    "miniProject": "1",
+    "majorProject": "1",
+  },
+  {
+    "id": 1,
+    "courseName": "Full Stack Web Development",
+    "courseBgImg": bgSrcLocation + "web" + "/bg.png",
+    "pdfLink": bgSrcLocation + "web" + "/syllabus.pdf",
+    "description": "The Web Development course will teach you how to create web pages, apps, and other online content by using the languages HTML, and CSS.",
+    "courseModule": [
+      {
+        title: 'Web Development Basic',
+        subTitle: [
+          'Web Fundamentals',
+          'The Command Line',
+        ]
+      },
+      {
+        title: 'Hyper Text Markup Language (HTML)',
+        subTitle: [
+          'Introduction to HTML',
+          'HTML tags, Metadata',
+          'Forms',
+          'HTML vs HTML5',
+          'Developer Tools',
+        ]
+      },
+      {
+        title: 'Web Design Basics',
+        subTitle: [
+          'The design Process',
+          'Introduction to User Experience (UX)',
+          'Building and using Mockups',
+        ]
+      },
+      {
+        title: 'Cascading Style Sheets [CSS]',
+        subTitle: [
+          'Introduction to CSS3',
+          'Syntax, Inline, Internal and External',
+          'Media, Animations',
+          'CSS Grid and CSS Layout',
+          'CSS Grid and Flex box',
+        ]
+      },
+      {
+        title: 'Node Js',
+        subTitle: [
+          'Selector, Traversing',
+          'Events, Ajax, DOM',
+        ]
+      },
+      {
+        title: 'Object Oriented Programming',
+        subTitle: [
+          'Inheritance,',
+          'Constructors and Destructor',
+          'Encapsulation',
+          'Polymorphism',
+        ]
+      },
+      {
+        title: 'JQuery',
+        subTitle: [
+          'Selector, Traversing',
+          'Events, Ajax, DOM',
+        ]
+      },
+      {
+        title: 'Database Management',
+        subTitle: [
+          'SQL',
+          'PHP',
+        ]
+      },
+      {
+        title: 'Java Script Programming',
+        subTitle: [
+          'The Fundamental of Code',
+          'Data type, Flow Control, Looping',
+          'Functional Programming',
+          'Objects and Prototype',
+          'Error Handling',
+          'Refactoring and Debugging',
+        ]
+      },
+      {
+        title: 'Data Base With MongoDB',
+        subTitle: [
+          'Implementation of communication.',
+          'Read and write data tothe database.',
+          'Aggregation framework.',
+          'Manage the configuration of the database.',
+        ]
+      },
+    ],
+    "languagesCovered": [
+      {
+        src: "/assets/web/lngs/html.webp",
+        alt: "HTML",
+        lang: "HTML"
+      },
+      {
+        src: "/assets/web/lngs/css.webp",
+        alt: "CSS",
+        lang: "CSS"
+      },
+      {
+        src: "/assets/web/lngs/js.webp",
+        alt: "JavaScript",
+        lang: "JavaScript"
+      },
+      {
+        src: "/assets/web/lngs/mysql.webp",
+        alt: "PHP",
+        lang: "PHP"
+      },
+      {
+        src: "/assets/web/lngs/php.webp",
+        alt: "MySql",
+        lang: "MySql"
+      }
+    ],
+    "projectCovered": "2",
+    "miniProject": "1",
+    "majorProject": "1",
+  },
+  {
+    "id": 11,
+    "courseName": "Digital Marketing",
+    "courseBgImg": bgSrcLocation + "digital_marketing" + "/bg.png",
+    "pdfLink": bgSrcLocation + "digital_marketing" + "/syllabus.pdf",
+    "description": "This course aims to set a solid foundation for the digital marketing skills required for successful campaigns in the digital world.",
+    "courseModule": [
+      {
+        title: 'Digital Marketing an Overview',
+        subTitle: [
+          'Digital marketing, also called online marketing, is the promotion of brands to connect with potential customers using the internet and other forms of digital communication. This includes not only email, social media, and web based advertising, but also text and multimedia messages as a marketing channel.',
+        ]
+      },
+      {
+        title: 'What Is WordPress?',
+        subTitle: [
+          'WordPress is a content management system (CMS) that allows you to host and build websites. WordPress contains plugin architecture and a template system, so you can customize any websites to fit your business, blog, portfolio, or online store.',
+        ]
+      },
+      {
+        title: 'WordPress Development',
+        subTitle: [
+          'WordPress Setup',
+          'Plugin Themes',
+          'Domain Extensions',
+          'Content Management System',
+          'Website Marketing',
+          'Blog Marketing',
+        ]
+      },
+      {
+        title: 'E-Mail Marketing',
+        subTitle: [
+          'Learn how to build an effective email marketing strategy as part of your inbound efforts.',
+          'Master the fundamentals of email marketing.',
+          'Invest in yourself and your career by learning one of the most in-demand skills in digital marketing.',
+          'Create and launch email campaigns as needed.',
+        ]
+      },
+      {
+        title: 'Online Reputation Management',
+        subTitle: [
+          'Manage an organization’s online reputation.',
+          'Apply reputational management principles to manage online issues and crises.',
+          'Build a strong participatory culture to engage your audience.',
+        ]
+      },
+      {
+        title: 'Google Ads & Pay Per Click',
+        subTitle: [
+          'Understand all of the common PPC terms.',
+          'Completely understand SEM & how to profit from it.',
+          'Leverage psychology in your SEM strategy.',
+          'Quickly & easily reverse engineer your competitors PPC strategy.',
+        ]
+      },
+      {
+        title: 'Google Analytics',
+        subTitle: [
+          'Google Analytics',
+          'Segmentation',
+          'Campaign Tracking',
+          'Analytics Intelligence',
+          'Website Tracking',
+        ]
+      },
+      {
+        title: 'Inbound Marketing',
+        subTitle: [
+          'Effective inbound marketing strategy specific to your business.',
+          'One of the most effective marketing strategies today.s',
+          'Learn to correctly use KPI.',
+        ]
+      },
+      {
+        title: 'Search Engine Optimization',
+        subTitle: [
+          'Understanding Search Engine Algorithms',
+          'SEO Ranking Factors',
+          'PPC foundations and Analytics',
+          'Robot',
+          'Spider',
+          'Crawler',
+        ]
+      },
+      {
+        title: 'Social Media Marketing',
+        subTitle: [
+          'Understand the landscape of traditional, digital, and social media marketing.',
+          'Understand the major social media platforms, how they function, and what role they play in marketing.',
+          'Understand the risks of social media.',
+          'Understand the wide scope of social media.',
+        ]
+      },
+    ],
+
+    "languagesCovered": [
+      {
+        src: "/assets/digital_marketing/lngs/wordPress.webp",
+        alt: "WordPress",
+        lang: "WordPress"
+      }
+    ],
+
+    "projectCovered": "2",
+    "miniProject": "1",
+    "majorProject": "1",
+  },
+  {
+    "id": 16,
+    "courseName": "Psychology",
+    "courseDuration": "2-3 Months",
+    "courseMode": "Live",
+    "courseBgImg": bgSrcLocation + "psychology" + "/bg.png",
+    "pdfLink": bgSrcLocation + "psychology" + "/syllabus.pdf",
+    "courseModule": [
+      {
+        "title": "Module 1: Introduction to Psychology (2 hours)",
+        "subTitle": [
+          "Overview of psychology: definition, history, and major perspectives",
+          "Branches of psychology: clinical, cognitive, developmental, social, and more",
+          "Research methods in psychology: experimental, correlational, observational",
+          "Key ethical considerations in psychological research"
+        ]
+      },
+      {
+        "title": "Module 2: Biological Bases of Behavior (2 hours)",
+        "subTitle": [
+          "Structure and function of the nervous system",
+          "Brain anatomy and its role in behavior and cognition",
+          "Neurotransmitters and their influence on behavior",
+          "The endocrine system and hormonal regulation",
+          "Hands-on: Case study on a neurological disorder"
+        ]
+      },
+      {
+        "title": "Module 3: Sensation and Perception (2 hours)",
+        "subTitle": [
+          "Understanding sensation and perception: definitions and distinctions",
+          "The sensory systems: vision, hearing, taste, smell, and touch",
+          "Perceptual processes: attention, organization, and interpretation",
+          "Perceptual illusions and their significance",
+          "Hands-on: Exploring sensory perception through interactive demonstrations"
+        ]
+      },
+      {
+        "title": "Module 4: Learning and Conditioning (2 hours)",
+        "subTitle": [
+          "Theories of learning: classical conditioning, operant conditioning, and observational learning",
+          "Key concepts: reinforcement, punishment, extinction, and generalization",
+          "Applications of learning theories in real life",
+          "Hands-on: Designing a basic behavioral modification plan"
+        ]
+      },
+      {
+        "title": "Module 5: Memory and Cognition (2 hours)",
+        "subTitle": [
+          "Models of memory: sensory memory, short-term memory, long-term memory",
+          "Processes of memory: encoding, storage, retrieval",
+          "Factors affecting memory: forgetting, interference, and amnesia",
+          "Cognitive processes: thinking, problem-solving, decision-making",
+          "Hands-on: Memory enhancement techniques and cognitive exercises"
+        ]
+      },
+      {
+        "title": "Module 6: Developmental Psychology (2 hours)",
+        "subTitle": [
+          "Overview of human development: prenatal, childhood, adolescence, adulthood",
+          "Key theories: Piaget's stages of cognitive development, Erikson's psychosocial stages",
+          "Physical, cognitive, and social development across the lifespan",
+          "Hands-on: Analyzing a case study on developmental milestones"
+        ]
+      },
+      {
+        "title": "Module 7: Personality Theories and Assessment (2 hours)",
+        "subTitle": [
+          "Major theories of personality: psychoanalytic, trait, humanistic, and social-cognitive",
+          "Personality assessment: types and methods (e.g., self-report, projective tests)",
+          "The role of genetics and environment in shaping personality",
+          "Hands-on: Exploring personality through self-assessment questionnaires"
+        ]
+      },
+      {
+        "title": "Module 8: Abnormal Psychology and Mental Health (2 hours)",
+        "subTitle": [
+          "Defining abnormal behavior: criteria and classification",
+          "Major psychological disorders: anxiety disorders, mood disorders, psychotic disorders",
+          "Approaches to treatment: psychotherapy, medication, alternative therapies",
+          "Hands-on: Case study analysis of a mental health disorder"
+        ]
+      },
+      {
+        "title": "Module 9: Social Psychology (2 hours)",
+        "subTitle": [
+          "Key concepts in social psychology: social cognition, attitudes, persuasion, and conformity",
+          "Group dynamics: group behavior, leadership, decision-making",
+          "Social influence and aggression: causes and effects",
+          "Hands-on: Designing an experiment on social influence"
+        ]
+      },
+      {
+        "title": "Module 10: Capstone Project and Review (2 hours)",
+        "subTitle": [
+          "Integrative project: applying psychological concepts to a real-world issue (e.g., mental health awareness campaign, behavioral intervention plan)",
+          "Presenting the project and receiving feedback",
+          "Review of key concepts and takeaways",
+          "Q&A and troubleshooting"
+        ]
+      }
+    ],
+    "languagesCovered": [
+      {
+        src: srcLocation + "virtuallab" + ".png",
+        alt: "Virtual Lab",
+        lang: "Virtual Lab"
+      },
+      {
+        src: srcLocation + "psyninfo" + ".png",
+        alt: "Psyn Info",
+        lang: "Psyn Info"
+      },
+      {
+        src: srcLocation + "psychologicalarts" + ".png",
+        alt: "Psychological Arts",
+        lang: "Psychological Arts"
+      },
+      {
+        src: srcLocation + "ethics" + ".png",
+        alt: "Ethics and Consent",
+        lang: "Ethics and Consent"
+      }
+    ],
+    "projectCovered": "2",
+    "miniProject": "1",
+    "majorProject": "1",
+  },
+]
 
 export const TopFeaturedCourses = [
   {
@@ -1419,6 +2039,7 @@ export const CourseCategoryData = [
       },
       {
         "id": 2,
+        "isHidden": true,
         "courseName": "Android App Development",
         "courseBgImg": bgSrcLocation + "android" + "/bg.png",
         "pdfLink": bgSrcLocation + "android" + "/syllabus.pdf",
@@ -2225,6 +2846,7 @@ export const CourseCategoryData = [
       },
       {
         "id": 17,
+        "isHidden": true,
         "courseName": "UI and UX Design",
         "courseBgImg": bgSrcLocation + "uiux" + "/bg.png",
         "pdfLink": bgSrcLocation + "uiux" + "/syllabus.pdf",
@@ -2337,7 +2959,7 @@ export const CourseCategoryData = [
             ]
           }
         ],
-        "toolsCovered": [
+        "languagesCovered": [
           {
             "src": srcLocation + "figma" + ".png",
             "alt": "Figma",
@@ -2367,6 +2989,131 @@ export const CourseCategoryData = [
             "src": srcLocation + "photoshop" + ".png",
             "alt": "Photoshop",
             "tool": "Photoshop"
+          }
+        ],
+        "projectCovered": "2",
+        "miniProject": "1",
+        "majorProject": "1"
+      },
+      {
+        "id": 19,
+        "courseName": "Java Core",
+        "courseBgImg": bgSrcLocation + "java" + "/bg.png",
+        "pdfLink": bgSrcLocation + "java" + "/syllabus.pdf",
+        "courseDuration": "2-3 Months",
+        "courseMode": "Live",
+        "courseModule": [
+          {
+            "title": "Module 1: Introduction to Java Programming (2 hours)",
+            "subTitle": [
+              "Overview of Java and Its Features",
+              "Setting Up the Java Development Environment",
+              "Basic Syntax and Structure",
+              "Hands-on: Writing Your First Java Program"
+            ]
+          },
+          {
+            "title": "Module 2: Java Data Types and Operators (2 hours)",
+            "subTitle": [
+              "Primitive Data Types",
+              "Type Conversion and Casting",
+              "Operators and Expressions",
+              "Hands-on: Implementing Mathematical Operations in Java"
+            ]
+          },
+          {
+            "title": "Module 3: Control Flow Statements (2 hours)",
+            "subTitle": [
+              "Conditional Statements: if, if-else, switch",
+              "Loops: for, while, do-while",
+              "Break, Continue, and Return Statements",
+              "Hands-on: Building Decision-Making Programs"
+            ]
+          },
+          {
+            "title": "Module 4: Arrays and Strings in Java (2 hours)",
+            "subTitle": [
+              "Introduction to Arrays",
+              "String Class and String Manipulation",
+              "Multi-Dimensional Arrays",
+              "Hands-on: Array and String Operations"
+            ]
+          },
+          {
+            "title": "Module 5: Object-Oriented Programming in Java (2 hours)",
+            "subTitle": [
+              "Introduction to OOP Concepts",
+              "Classes and Objects",
+              "Constructors and Destructors",
+              "Hands-on: Creating and Managing Objects in Java"
+            ]
+          },
+          {
+            "title": "Module 6: Inheritance and Polymorphism (2 hours)",
+            "subTitle": [
+              "Understanding Inheritance",
+              "Types of Inheritance",
+              "Polymorphism: Method Overloading and Overriding",
+              "Hands-on: Implementing Inheritance in Java"
+            ]
+          },
+          {
+            "title": "Module 7: Exception Handling (2 hours)",
+            "subTitle": [
+              "Understanding Exceptions",
+              "Try-Catch Block and Multiple Exceptions",
+              "Custom Exceptions and Exception Propagation",
+              "Hands-on: Handling Exceptions in a Java Program"
+            ]
+          },
+          {
+            "title": "Module 8: Java Collections Framework (2 hours)",
+            "subTitle": [
+              "Introduction to Collections",
+              "ArrayList, LinkedList, HashMap, HashSet",
+              "Iterating and Manipulating Collections",
+              "Hands-on: Implementing Data Structures with Java Collections"
+            ]
+          },
+          {
+            "title": "Module 9: Multithreading in Java (2 hours)",
+            "subTitle": [
+              "Understanding Threads and Concurrency",
+              "Thread Lifecycle and Management",
+              "Synchronization and Inter-Thread Communication",
+              "Hands-on: Building a Multi-threaded Application"
+            ]
+          },
+          {
+            "title": "Module 10: File Handling and I/O Streams (2 hours)",
+            "subTitle": [
+              "File Reading and Writing",
+              "Understanding Input and Output Streams",
+              "Serialization and Deserialization",
+              "Hands-on: File Operations in Java"
+            ]
+          },
+          {
+            "title": "Additional Resources",
+            "subTitle": [
+              "Assignments: Exercises after each module",
+              "Project: One mini and one major project to be completed by the end of the course",
+              "Reference Materials: Links to documentation, tutorials, and further reading"
+            ]
+          },
+          {
+            "title": "Evaluation",
+            "subTitle": [
+              "Quizzes: Short quizzes after each module to reinforce learning",
+              "Project Evaluation: Feedback on the final project to assess understanding and application of concepts"
+            ]
+          }
+        ],
+        "languagesCovered": [
+          {
+            "src": srcLocation + "java" + ".png",
+            "alt": "Java",
+            "lang": "Java"
           }
         ],
         "projectCovered": "2",
@@ -2675,6 +3422,276 @@ export const CourseCategoryData = [
         "miniProject": "1",
         "majorProject": "1",
       },
+      {
+        "id": 21,
+        "courseName": "Hybrid and Electric Vehicles",
+        "courseBgImg": bgSrcLocation + "hev" + "/bg.png",
+        "pdfLink": bgSrcLocation + "hev" + "/syllabus.pdf",
+        "courseDuration": "3-4 Months",
+        "courseMode": "Live",
+        "courseModule": [
+          {
+            "title": "Module 1: Introduction to Hybrid and Electric Vehicles (2 hours)",
+            "subTitle": [
+              "Overview of Electric and Hybrid Vehicles",
+              "Types of Electric Vehicles: BEV, HEV, PHEV, FCEV",
+              "Historical Development and Market Trends",
+              "Basic Concepts of Electric Mobility"
+            ]
+          },
+          {
+            "title": "Module 2: Electric Vehicle (EV) Components and Architecture (2 hours)",
+            "subTitle": [
+              "EV Drivetrain Components: Electric Motor, Inverter, Battery",
+              "EV Powertrain Architecture",
+              "Understanding Regenerative Braking Systems",
+              "Hands-on: EV architecture simulation exercise"
+            ]
+          },
+          {
+            "title": "Module 3: Hybrid Vehicle Technologies (2 hours)",
+            "subTitle": [
+              "Types of Hybrid Vehicles: Mild, Full, Plug-in Hybrid",
+              "Hybrid Powertrain Architecture",
+              "Energy Flow in Hybrid Vehicles",
+              "Hands-on: Analyzing a hybrid vehicle energy system"
+            ]
+          },
+          {
+            "title": "Module 4: Batteries and Energy Storage Systems (2 hours)",
+            "subTitle": [
+              "Battery Chemistry: Li-ion, NiMH, Solid-State",
+              "Battery Management Systems (BMS)",
+              "Energy Density, Efficiency, and Charging Mechanisms",
+              "Hands-on: Designing a basic BMS model"
+            ]
+          },
+          {
+            "title": "Module 5: Electric Motors and Control Systems (2 hours)",
+            "subTitle": [
+              "Types of Electric Motors: AC, DC, Brushless Motors",
+              "Motor Control Algorithms and Techniques",
+              "Role of Inverters in Electric Vehicles",
+              "Hands-on: Motor control system simulation"
+            ]
+          },
+          {
+            "title": "Module 6: Charging Infrastructure and EV Policies (2 hours)",
+            "subTitle": [
+              "EV Charging Standards: AC, DC Fast Charging",
+              "Charging Infrastructure and Grid Integration",
+              "Global EV Policies and Regulations",
+              "Hands-on: Designing a public charging infrastructure layout"
+            ]
+          },
+          {
+            "title": "Module 7: Power Electronics in Hybrid and Electric Vehicles (2 hours)",
+            "subTitle": [
+              "Introduction to Power Electronics Components",
+              "DC-DC Converters, Inverters, and Rectifiers",
+              "Power Losses and Thermal Management",
+              "Hands-on: Simulation of a DC-DC converter"
+            ]
+          },
+          {
+            "title": "Module 8: Vehicle Dynamics and Control (2 hours)",
+            "subTitle": [
+              "Vehicle Dynamics in EVs and HEVs",
+              "Energy Management Strategies",
+              "Drive-by-Wire and Autonomous Systems",
+              "Hands-on: Simulating vehicle control algorithms"
+            ]
+          },
+          {
+            "title": "Module 9: Thermal Management Systems (2 hours)",
+            "subTitle": [
+              "Thermal Management in Batteries and Power Electronics",
+              "Cooling Techniques for EV Components",
+              "Thermal Management Systems Design",
+              "Hands-on: Designing a thermal management system for an EV"
+            ]
+          },
+          {
+            "title": "Module 10: Project and Revision (2 hours)",
+            "subTitle": [
+              "Building a Hybrid/Electric Vehicle Model",
+              "Integration of Various Vehicle Components",
+              "Testing and Performance Optimization",
+              "Q&A and Troubleshooting"
+            ]
+          },
+          {
+            "title": "Additional Resources",
+            "subTitle": [
+              "Assignments: Small exercises after each module",
+              "Project: One mini and one major project to be completed by the end of the course",
+              "Reference Materials: Links to documentation, tutorials, and further reading"
+            ]
+          },
+          {
+            "title": "Evaluation",
+            "subTitle": [
+              "Quizzes: Short quizzes after each module to reinforce learning",
+              "Project Evaluation: Feedback on the final project to assess understanding and application of concepts"
+            ]
+          }
+        ],
+        "languagesCovered": [
+          {
+            "src": srcLocation + "matlab" + ".png",
+            "alt": "MATLAB",
+            "tool": "MATLAB"
+          },
+          {
+            "src": srcLocation + "autocad" + ".png",
+            "alt": "AutoCAD",
+            "tool": "AutoCAD"
+          },
+          {
+            "src": srcLocation + "solidWorks" + ".png",
+            "alt": "SolidWorks",
+            "tool": "SolidWorks"
+          },
+          {
+            "src": srcLocation + "ansys" + ".png",
+            "alt": "ANSYS",
+            "tool": "ANSYS"
+          }
+        ],
+        "projectCovered": "2",
+        "miniProject": "1",
+        "majorProject": "1"
+      },
+      {
+        "id": 22,
+        "courseName": "Embedded Systems",
+        "courseBgImg": bgSrcLocation + "embeded_systems" + "/bg.png",
+        "pdfLink": bgSrcLocation + "embeded_systems" + "/syllabus.pdf",
+        "courseDuration": "2-3 Months",
+        "courseMode": "Live",
+        "courseModule": [
+          {
+            "title": "Module 1: Introduction to Embedded Systems (2 hours)",
+            "subTitle": [
+              "Overview of Embedded Systems",
+              "Understanding Hardware and Software Components",
+              "Introduction to Microcontrollers and Microprocessors",
+              "Setting up the Development Environment (IDE, Compiler)"
+            ]
+          },
+          {
+            "title": "Module 2: Embedded C Programming (2 hours)",
+            "subTitle": [
+              "Basics of C for Embedded Systems",
+              "Input/Output Handling in C",
+              "Memory Management and Optimization",
+              "Hands-on: Writing a basic embedded C program"
+            ]
+          },
+          {
+            "title": "Module 3: Microcontrollers and Peripherals (2 hours)",
+            "subTitle": [
+              "Understanding Microcontroller Architecture",
+              "Peripheral Interfaces: GPIO, ADC, Timers, UART",
+              "Communication Protocols: I2C, SPI, UART",
+              "Hands-on: Interfacing peripherals with microcontrollers"
+            ]
+          },
+          {
+            "title": "Module 4: Real-Time Operating Systems (RTOS) Basics (2 hours)",
+            "subTitle": [
+              "Introduction to Real-Time Systems",
+              "Task Scheduling and Multitasking",
+              "RTOS vs Bare-Metal Systems",
+              "Hands-on: Creating a simple RTOS-based application"
+            ]
+          },
+          {
+            "title": "Module 5: Embedded Communication Protocols (2 hours)",
+            "subTitle": [
+              "Overview of Embedded Communication Systems",
+              "Serial Communication Protocols (UART, I2C, SPI)",
+              "Wireless Communication (Bluetooth, ZigBee, Wi-Fi)",
+              "Hands-on: Implementing communication between devices"
+            ]
+          },
+          {
+            "title": "Module 6: Sensor Interfacing and Data Acquisition (2 hours)",
+            "subTitle": [
+              "Types of Sensors and Actuators",
+              "Interfacing Analog and Digital Sensors",
+              "Data Acquisition and Processing",
+              "Hands-on: Reading data from a sensor and processing it"
+            ]
+          },
+          {
+            "title": "Module 7: Power Management in Embedded Systems (2 hours)",
+            "subTitle": [
+              "Low Power Design Techniques",
+              "Battery Management in Embedded Devices",
+              "Sleep Modes and Power Optimization",
+              "Hands-on: Implementing power-saving techniques"
+            ]
+          },
+          {
+            "title": "Module 8: Embedded Systems Security (2 hours)",
+            "subTitle": [
+              "Introduction to Security in Embedded Systems",
+              "Threats and Vulnerabilities",
+              "Encryption and Secure Communication Protocols",
+              "Hands-on: Implementing basic security in an embedded system"
+            ]
+          },
+          {
+            "title": "Module 9: Embedded System Debugging and Testing (2 hours)",
+            "subTitle": [
+              "Debugging Techniques for Embedded Systems",
+              "Using Debuggers, Logic Analyzers, and Oscilloscopes",
+              "Testing Embedded Systems for Reliability",
+              "Hands-on: Debugging a sample embedded application"
+            ]
+          },
+          {
+            "title": "Module 10: Project and Revision (2 hours)",
+            "subTitle": [
+              "Building a Complete Embedded System",
+              "Integration of Software and Hardware Components",
+              "Testing and Optimizing the System",
+              "Q&A and Troubleshooting"
+            ]
+          },
+          {
+            "title": "Additional Resources",
+            "subTitle": [
+              "Assignments: Small exercises after each module",
+              "Project: One mini and one major project to be completed by the end of the course",
+              "Reference Materials: Links to documentation, datasheets, and tutorials"
+            ]
+          },
+          {
+            "title": "Evaluation",
+            "subTitle": [
+              "Quizzes: Short quizzes after each module to reinforce learning",
+              "Project Evaluation: Feedback on the final project to assess understanding and application of concepts"
+            ]
+          }
+        ],
+        "languagesCovered": [
+          {
+            "src": srcLocation + "arduino" + ".png",
+            "alt": "Arduino",
+            "tool": "Arduino"
+          },
+          {
+            "src": srcLocation + "raspberrypi" + ".png",
+            "alt": "Raspberry Pi",
+            "tool": "Raspberry Pi"
+          }
+        ],
+        "projectCovered": "2",
+        "miniProject": "1",
+        "majorProject": "1"
+      }
     ],
     "icon": "fa fa-bolt",
     "isExpanded": false
@@ -2817,6 +3834,7 @@ export const CourseCategoryData = [
       },
       {
         "id": 9,
+        "isHidden": true,
         "courseName": "Drone Mechanics",
         "courseDuration": "2-3 Months",
         "courseMode": "Live",
@@ -2942,6 +3960,146 @@ export const CourseCategoryData = [
         "miniProject": "1",
         "majorProject": "1",
       },
+      {
+        "id": 20,
+        "courseName": "Hybrid and Electric Vehicles",
+        "courseBgImg": bgSrcLocation + "hev" + "/bg.png",
+        "pdfLink": bgSrcLocation + "hev" + "/syllabus.pdf",
+        "courseDuration": "3-4 Months",
+        "courseMode": "Live",
+        "courseModule": [
+          {
+            "title": "Module 1: Introduction to Hybrid and Electric Vehicles (2 hours)",
+            "subTitle": [
+              "Overview of Electric and Hybrid Vehicles",
+              "Types of Electric Vehicles: BEV, HEV, PHEV, FCEV",
+              "Historical Development and Market Trends",
+              "Basic Concepts of Electric Mobility"
+            ]
+          },
+          {
+            "title": "Module 2: Electric Vehicle (EV) Components and Architecture (2 hours)",
+            "subTitle": [
+              "EV Drivetrain Components: Electric Motor, Inverter, Battery",
+              "EV Powertrain Architecture",
+              "Understanding Regenerative Braking Systems",
+              "Hands-on: EV architecture simulation exercise"
+            ]
+          },
+          {
+            "title": "Module 3: Hybrid Vehicle Technologies (2 hours)",
+            "subTitle": [
+              "Types of Hybrid Vehicles: Mild, Full, Plug-in Hybrid",
+              "Hybrid Powertrain Architecture",
+              "Energy Flow in Hybrid Vehicles",
+              "Hands-on: Analyzing a hybrid vehicle energy system"
+            ]
+          },
+          {
+            "title": "Module 4: Batteries and Energy Storage Systems (2 hours)",
+            "subTitle": [
+              "Battery Chemistry: Li-ion, NiMH, Solid-State",
+              "Battery Management Systems (BMS)",
+              "Energy Density, Efficiency, and Charging Mechanisms",
+              "Hands-on: Designing a basic BMS model"
+            ]
+          },
+          {
+            "title": "Module 5: Electric Motors and Control Systems (2 hours)",
+            "subTitle": [
+              "Types of Electric Motors: AC, DC, Brushless Motors",
+              "Motor Control Algorithms and Techniques",
+              "Role of Inverters in Electric Vehicles",
+              "Hands-on: Motor control system simulation"
+            ]
+          },
+          {
+            "title": "Module 6: Charging Infrastructure and EV Policies (2 hours)",
+            "subTitle": [
+              "EV Charging Standards: AC, DC Fast Charging",
+              "Charging Infrastructure and Grid Integration",
+              "Global EV Policies and Regulations",
+              "Hands-on: Designing a public charging infrastructure layout"
+            ]
+          },
+          {
+            "title": "Module 7: Power Electronics in Hybrid and Electric Vehicles (2 hours)",
+            "subTitle": [
+              "Introduction to Power Electronics Components",
+              "DC-DC Converters, Inverters, and Rectifiers",
+              "Power Losses and Thermal Management",
+              "Hands-on: Simulation of a DC-DC converter"
+            ]
+          },
+          {
+            "title": "Module 8: Vehicle Dynamics and Control (2 hours)",
+            "subTitle": [
+              "Vehicle Dynamics in EVs and HEVs",
+              "Energy Management Strategies",
+              "Drive-by-Wire and Autonomous Systems",
+              "Hands-on: Simulating vehicle control algorithms"
+            ]
+          },
+          {
+            "title": "Module 9: Thermal Management Systems (2 hours)",
+            "subTitle": [
+              "Thermal Management in Batteries and Power Electronics",
+              "Cooling Techniques for EV Components",
+              "Thermal Management Systems Design",
+              "Hands-on: Designing a thermal management system for an EV"
+            ]
+          },
+          {
+            "title": "Module 10: Project and Revision (2 hours)",
+            "subTitle": [
+              "Building a Hybrid/Electric Vehicle Model",
+              "Integration of Various Vehicle Components",
+              "Testing and Performance Optimization",
+              "Q&A and Troubleshooting"
+            ]
+          },
+          {
+            "title": "Additional Resources",
+            "subTitle": [
+              "Assignments: Small exercises after each module",
+              "Project: One mini and one major project to be completed by the end of the course",
+              "Reference Materials: Links to documentation, tutorials, and further reading"
+            ]
+          },
+          {
+            "title": "Evaluation",
+            "subTitle": [
+              "Quizzes: Short quizzes after each module to reinforce learning",
+              "Project Evaluation: Feedback on the final project to assess understanding and application of concepts"
+            ]
+          }
+        ],
+        "languagesCovered": [
+          {
+            "src": srcLocation + "matlab" + ".png",
+            "alt": "MATLAB",
+            "tool": "MATLAB"
+          },
+          {
+            "src": srcLocation + "autocad" + ".png",
+            "alt": "AutoCAD",
+            "tool": "AutoCAD"
+          },
+          {
+            "src": srcLocation + "solidWorks" + ".png",
+            "alt": "SolidWorks",
+            "tool": "SolidWorks"
+          },
+          {
+            "src": srcLocation + "ansys" + ".png",
+            "alt": "ANSYS",
+            "tool": "ANSYS"
+          }
+        ],
+        "projectCovered": "2",
+        "miniProject": "1",
+        "majorProject": "1"
+      }
     ],
     "icon": "fa fa-gears",
     "isExpanded": false
@@ -3528,6 +4686,146 @@ export const CourseCategoryData = [
         "miniProject": "1",
         "majorProject": "1",
       },
+      {
+        "id": 18,
+        "courseName": "Business Analytics",
+        "courseBgImg": bgSrcLocation + "buisness_analytics" + "/bg.png",
+        "pdfLink": bgSrcLocation + "buisness_analytics" + "/syllabus.pdf",
+        "courseDuration": "3-4 Months",
+        "courseMode": "Live",
+        "courseModule": [
+          {
+            "title": "Module 1: Introduction to Business Analytics (2 hours)",
+            "subTitle": [
+              "Overview of Business Analytics",
+              "Importance and Applications of Analytics in Business",
+              "Understanding the Analytics Process",
+              "Hands-on: Defining Analytics Objectives for a Business Case"
+            ]
+          },
+          {
+            "title": "Module 2: Data Collection and Data Quality (2 hours)",
+            "subTitle": [
+              "Types of Data: Structured and Unstructured",
+              "Data Collection Methods and Tools",
+              "Ensuring Data Quality and Accuracy",
+              "Hands-on: Collecting and Cleaning Business Data"
+            ]
+          },
+          {
+            "title": "Module 3: Data Visualization (2 hours)",
+            "subTitle": [
+              "Importance of Data Visualization",
+              "Creating Charts and Graphs",
+              "Tools for Visualization: Excel, Tableau, Power BI",
+              "Hands-on: Visualizing Business Data with Excel and Tableau"
+            ]
+          },
+          {
+            "title": "Module 4: Descriptive Analytics (2 hours)",
+            "subTitle": [
+              "Understanding Descriptive Statistics",
+              "Measures of Central Tendency and Variability",
+              "Data Summarization Techniques",
+              "Hands-on: Descriptive Analysis on Business Datasets"
+            ]
+          },
+          {
+            "title": "Module 5: Predictive Analytics (2 hours)",
+            "subTitle": [
+              "Introduction to Predictive Modeling",
+              "Regression Analysis and Forecasting",
+              "Predictive Tools: R, Python, Excel",
+              "Hands-on: Building a Predictive Model"
+            ]
+          },
+          {
+            "title": "Module 6: Prescriptive Analytics (2 hours)",
+            "subTitle": [
+              "What is Prescriptive Analytics?",
+              "Optimization Techniques and Decision Modeling",
+              "Using Prescriptive Analytics for Strategic Decisions",
+              "Hands-on: Solving Optimization Problems"
+            ]
+          },
+          {
+            "title": "Module 7: Introduction to Machine Learning in Business Analytics (2 hours)",
+            "subTitle": [
+              "Overview of Machine Learning Techniques",
+              "Supervised vs. Unsupervised Learning",
+              "Use Cases in Business",
+              "Hands-on: Applying Machine Learning Models for Business Insights"
+            ]
+          },
+          {
+            "title": "Module 8: Business Intelligence and Reporting (2 hours)",
+            "subTitle": [
+              "Introduction to Business Intelligence",
+              "Key Metrics and KPI Development",
+              "Tools for BI Reporting",
+              "Hands-on: Creating Dashboards with Power BI"
+            ]
+          },
+          {
+            "title": "Module 9: Big Data and Analytics (2 hours)",
+            "subTitle": [
+              "Introduction to Big Data",
+              "Big Data Technologies: Hadoop, Spark",
+              "Application of Big Data in Business Analytics",
+              "Hands-on: Analyzing Large Datasets"
+            ]
+          },
+          {
+            "title": "Module 10: Project and Revision (2 hours)",
+            "subTitle": [
+              "Building an End-to-End Analytics Project",
+              "Review of Key Concepts",
+              "Best Practices in Business Analytics",
+              "Q&A and Troubleshooting"
+            ]
+          },
+          {
+            "title": "Additional Resources",
+            "subTitle": [
+              "Assignments: Exercises after each module",
+              "Project: One mini and one major project to be completed by the end of the course",
+              "Reference Materials: Links to documentation, tutorials, and further reading"
+            ]
+          },
+          {
+            "title": "Evaluation",
+            "subTitle": [
+              "Quizzes: Short quizzes after each module to reinforce learning",
+              "Project Evaluation: Feedback on the final project to assess understanding and application of concepts"
+            ]
+          }
+        ],
+        "languagesCovered": [
+          {
+            "src": srcLocation + "msexcell" + ".png",
+            "alt": "Excel",
+            "tool": "Excel"
+          },
+          {
+            "src": srcLocation + "tableau" + ".png",
+            "alt": "Tableau",
+            "tool": "Tableau"
+          },
+          {
+            "src": srcLocation + "powerbi" + ".png",
+            "alt": "Power BI",
+            "tool": "Power BI"
+          },
+          {
+            "src": srcLocation + "python" + ".png",
+            "alt": "Python",
+            "tool": "Python"
+          }
+        ],
+        "projectCovered": "2",
+        "miniProject": "1",
+        "majorProject": "1"
+      }
     ],
     "icon": "fa fa-briefcase",
     "isExpanded": false
@@ -3537,6 +4835,7 @@ export const CourseCategoryData = [
     "subdomains": [
       {
         "id": 15,
+        "isHidden": true,
         "courseName": "Nano Technology",
         "courseBgImg": bgSrcLocation + "nano_technology" + "/bg.png",
         "pdfLink": bgSrcLocation + "nano_technology" + "/syllabus.pdf",

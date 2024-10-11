@@ -1,1 +1,16 @@
-<p>slider works!</p>
+<div class="item" #cardRef>
+  <ng-template class="card-container" [ngTemplateOutlet]="cardTemplateRef"
+    [ngTemplateOutletContext]="{ $implicit: data }"></ng-template>
+</div>
+
+<div class="slide-btns">
+  <button class="prev" (click)="prev()" title="Previous"><span><i class="fa fa-chevron-left"></i></span></button>
+  <div class="dots" #dotsRefParent>
+    @for (item of data; track $index) {
+    <div class="dot" (click)="updateActiveDot($index, true)"></div>
+    } @empty {
+    <h3>No items available</h3>
+    }
+  </div>
+  <button class="next" (click)="next()" title="Next"><span><i class="fa fa-chevron-right"></i></span></button>
+</div>

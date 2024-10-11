@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lms-project": {
+    "mindenious-edutech": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "lms-project:build:production"
+              "buildTarget": "mindenious-edutech:build:production"
             },
             "development": {
-              "buildTarget": "lms-project:build:development"
+              "buildTarget": "mindenious-edutech:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "lms-project:build"
+            "buildTarget": "mindenious-edutech:build"
           }
         },
         "test": {

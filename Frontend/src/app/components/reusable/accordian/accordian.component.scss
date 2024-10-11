@@ -4,6 +4,11 @@
   flex-direction: column;
   gap: 40px;
 
+  @media screen and (max-width: 768px) {
+    padding: 10px 5px;
+
+  }
+
   .course-accordian {
     .module-accordian {
       &,
@@ -11,11 +16,18 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        list-style: square !important;
+        padding-left: 15px;
+        box-sizing: border-box;
+
+        li {
+          font-size: var(--font-size-sm);
+        }
 
         .accordion-link-btn {
           width: max-content;
-          padding: 5px 10px;
-          font-size: var(--h5);
+          padding: 5px 15px;
+          font-size: var(--font-size-sm);
           margin-top: 10px;
         }
       }
@@ -28,10 +40,19 @@
       }
 
       .title {
-        font-weight: 500;
+        font-weight: 700;
         letter-spacing: 1px;
-        font-size: var(--h4);
+        font-size: var(--font-size-base);
         text-transform: capitalize;
+
+        @media screen and (max-width: 768px) {
+          font-size: var(--font-size-sm);
+        }
+      }
+
+      .sub-title {
+        font-size: var(--font-size-sm);
+        letter-spacing: 1px;
       }
     }
   }

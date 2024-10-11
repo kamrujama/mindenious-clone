@@ -1,0 +1,54 @@
+<div class="form-section">
+  <form #userDetails="ngForm" method="POST" class="user-details-wrapper" (ngSubmit)="submitFormData(userDetails)">
+    <!-- Username -->
+    <input #name="ngModel" class="input" type="text" name="name" placeholder="Full Name" minlength="3" ngModel required>
+    @if (name.invalid && (name.dirty || name.touched)) {
+      @if (name.hasError('required')) {
+      <small>Name is required.</small>
+      }
+      @if (name.hasError('minlength')) {
+      <small>Name must be at least 3 characters long.</small>
+      }
+    }
+
+    <!-- User Mail -->
+    <input #email="ngModel" class="input" type="email" name="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel required>
+    @if (email.invalid && (email.dirty || email.touched)) {
+      @if (email.hasError('required')) {
+      <small>Email is required.</small>
+      }
+      @if (email.hasError('pattern')) {
+        <small>Please enter a valid email.</small>
+      }
+      @if (email.hasError('email')) {
+      <small>Please enter a valid email.</small>
+      }
+    }
+
+    <!-- User Phone -->
+    <input #phone="ngModel" class="input" type="number" name="phone" placeholder="Phone Number" minlength="10" maxlength="10" pattern="[0-9]{10}" ngModel required>
+    @if (phone.invalid && (phone.dirty || phone.touched)) {
+      @if (phone.hasError('required')) {
+        <small>Phone is required.</small>
+      }
+
+      @if (phone.hasError('pattern')) {
+        <small>Phone must be at least 10 digit.</small>
+      }
+    }
+
+    <!-- Message -->
+     @if (isMessageVisible) {
+      <input class="input" type="text" name="role" [(ngModel)]="role" style="display: none;">
+      <textarea #message="ngModel" class="input" name="message" id="" placeholder="Message" cols="48" rows="6" ngModel></textarea>
+      <p class="drop-mail-info">{{'*Drop your resume to : hr@mindenious.com'}}</p>
+     }
+
+    <!-- Current Date -->
+    <input #date="ngModel" class="input" type="text" name="date" placeholder="Current date" ngModel style="display: none;">
+
+    <button class="button" type="submit" [disabled]="userDetails.invalid" [class]="{active : !userDetails.invalid}">
+      {{loading ? 'Submitting...' : 'Submit'}}
+    </button>
+  </form>
+</div>

@@ -1,11 +1,11 @@
-import { Component, ElementRef, HostListener, ViewChild, inject } from '@angular/core';
-import { Route, Router, ActivatedRoute, IsActiveMatchOptions } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { NavbarService } from '../../services/header/navbar.service';
 import { CourseCardComponent } from '../reusable/cards/course-card/course-card.component';
 import { LoginComponent } from '../main/login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AuthenticationService } from '../../services/authentication.service';
-import { CourseCategoryData, TopFeaturedCourses } from '../../../../data';
+import { CourseCategoryData, TrendingCourses } from '../../../../data';
 import { TrendingCourseBarComponent } from '../common/trending-course-bar/trending-course-bar.component';
 import { ShortenPipe } from '../../pipes/shorten.pipe';
 
@@ -28,7 +28,7 @@ export class NavbarComponent {
   isSubMenuOpened = false;
   selectedDomain = 'IT Domains';
   logoPath = '';
-  topTrendingCourses = TopFeaturedCourses
+  topTrendingCourses = TrendingCourses
 
   mainNavMenuObjects = [
     {
@@ -72,6 +72,7 @@ export class NavbarComponent {
   }
 
   navigateTo(path:string) {
+    this.isTrendingModalOpen = false;
     this.showMegaMenu = false;
     this.navbarService.navigateTo(path);
     window.scrollTo(0, 0);
@@ -88,6 +89,7 @@ export class NavbarComponent {
   }
 
   toggleProgramSubmenu(title:string) {
+    this.isTrendingModalOpen = false;
     this.megaMenuObject.forEach((domain) => {
       if(domain.title === title) {
         domain.isExpanded = true;
@@ -98,6 +100,7 @@ export class NavbarComponent {
   }
 
   toggleSidebar(title:string) {
+    this.isTrendingModalOpen = false;
     this.isSideMenuOpen = true;
     this.megaMenuObject.forEach((domain) => {
       if(domain.title === title) {

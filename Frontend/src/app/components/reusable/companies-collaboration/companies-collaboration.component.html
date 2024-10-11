@@ -1,12 +1,12 @@
-<section class="companies-collaboration section-margin">
+<section class="companies-collaboration section-margin" style="display: flex; flex-direction: column; gap: 20px;margin-bottom: 40px;margin-top: 40px;">
   <div class="collab-header section-title">
     <h1>Your Trust is Our Priority</h1>
     <p>We are proudly certified by these organizations</p>
   </div>
   <div class="company-collaboration-wrapper">
     @for (item of collabLogo; track $index) {
-    <div class="logo-wrapper">
-      <img [src]="item.logo" [alt]="item.title">
+    <div class="logo-wrapper" [class.has-border-radius-50]="$index !== 0 && $index !== 3">
+      <img [src]="item.logo" [alt]="item.title" [class.has-border-radius-50]="$index !== 0 && $index !== 3">
     </div>
     }
   </div>

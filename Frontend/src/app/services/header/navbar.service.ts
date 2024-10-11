@@ -26,17 +26,13 @@ export class NavbarService {
   }
 
   navigateToCourse(path:string, details:any) {
-    this.router.navigate([path, details.courseName.split(' ').join('-')]);
+    this.router.navigate([path, details.id], {
+      queryParams: {
+        course: details.courseName.split(' ').join('-'),
+      }
+    });
     window.scrollTo(0, 0);
   }
-  // navigateToCourse(path:string, details:any) {
-  //   this.router.navigate([path, details.id], {
-  //     queryParams: {
-  //       course: details.courseName.split(' ').join('-'),
-  //     }
-  //   });
-  //   window.scrollTo(0, 0);
-  // }
 
   isLinkActive(path:string) {
     return this.router.isActive(path, false) && this.router.url === path;

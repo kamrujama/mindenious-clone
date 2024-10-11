@@ -8,7 +8,7 @@ pipelines:
           - npm install
           - npm run build:prod
           - npm install -g netlify-cli
-          - netlify deploy --prod --dir=dist/lms-project/browser
+          - netlify deploy --prod --dir=dist/mindenious-edutech/browser
 
 definitions:
   caches:

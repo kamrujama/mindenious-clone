@@ -4,9 +4,11 @@
 /tmp
 /out-tsc
 /bazel-out
+/dist
 
 # Node
 /node_modules
+/dist
 npm-debug.log
 yarn-error.log
 

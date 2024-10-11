@@ -38,13 +38,8 @@
       <div class="address">
         <h5>Address</h5>
         <p>
-          No 235, Binnamangala, 13h Cross Road, Indiranagar 2nd Stage, Bangalore -560038
+          235, 13th Cross, Hoyasala Nagar, 2nd Stage, Indiranagar (Bangalore), Bangalore North, Bangalore, Karnataka - 560038
         </p>
-      </div>
-
-      <div class="mobile-contact-info">
-        <p><span>E-mail:</span><span>{{'support@mindenious.com'}}</span></p>
-        <p><span>Phone:</span><span>+91 9036584096</span></p>
       </div>
 
       <!-- social links -->
@@ -58,18 +53,25 @@
           }
         </div>
       </div>
+
+      <div class="contact-info">
+        <p class="email"><span class="icon"><i class="fa fa-envelope"></i></span><span>{{'support@mindenious.com'}}</span></p>
+        <p class="phone"><span class="icon"><i class="fa fa-phone"></i></span><span>+91 9108126243</span></p>
+      </div>
     </div>
 
-    <!-- links -->
-    <div class="links">
+     <!-- links -->
+     <div class="links">
 
       <!-- Tech Courses Starts -->
       <div class="tech-courses">
         <h3>Tech Courses</h3>
         <ul class="course-list-container">
           @for (course of techCourses; track $index) {
-          <li><a (click)="navigateToCourse('/course', course)"
-              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+          @if (!course?.isHidden) {
+            <li><a (click)="navigateToCourse('/course', course)"
+                routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+            }
           }
         </ul>
       </div>
@@ -78,8 +80,10 @@
       <app-custom-accordion [title]="'Tech Courses'" class="mobile-accordion">
         <ul class="course-list-container">
           @for (course of techCourses; track $index) {
-          <li><a (click)="navigateToCourse('/course', course)"
-              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+          @if (!course?.isHidden) {
+            <li><a (click)="navigateToCourse('/course', course)"
+                routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+            }
           }
         </ul>
       </app-custom-accordion>
@@ -90,8 +94,10 @@
         <h3>Non-Tech Courses</h3>
         <ul class="course-list-container">
           @for (course of nonTechCourses; track $index) {
-          <li><a (click)="navigateToCourse('/course', course)"
-              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+          @if (!course?.isHidden) {
+            <li><a (click)="navigateToCourse('/course', course)"
+                routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+            }
           }
         </ul>
       </div>
@@ -100,8 +106,10 @@
       <app-custom-accordion [title]="'Non-Tech Courses'" class="mobile-accordion">
         <ul class="course-list-container">
           @for (course of nonTechCourses; track $index) {
-          <li><a (click)="navigateToCourse('/course', course)"
-              routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+            @if (!course?.isHidden) {
+              <li><a (click)="navigateToCourse('/course', course)"
+                  routerLinkActive="router-link-active">{{course.courseName}}</a></li>
+            }
           }
         </ul>
       </app-custom-accordion>
@@ -115,10 +123,6 @@
           <li><a (click)="navigateTo(link.routePath)" routerLinkActive="router-link-active">{{link.name}}</a></li>
           }
         </ul>
-        <div class="contact-info">
-          <p><span>E-mail:</span><span>{{'support@mindenious.com'}}</span></p>
-          <p><span>Phone:</span><span>+91 9036584096</span></p>
-        </div>
       </div>
       <!-- mobile accordion -->
       <app-custom-accordion [title]="'Usefull Links'" class="mobile-accordion">
@@ -128,11 +132,6 @@
           }
         </ul>
       </app-custom-accordion>
-
-      <!-- <div class="contact-info">
-        <p>E-mail: support@mindenious.com</p>
-        <p>Phone: +91 9036584096</p>
-      </div> -->
       <!-- Useful Links Ends Here -->
 
     </div>
@@ -140,12 +139,13 @@
 
   <!-- Copyright -->
   <div class="footer-copyright">
-    <p class="copyright">© 2024 Mindenious. All rights reserved.</p>
+    <p class="copyright">{{"© 2024 Mindenious Edutech LLP. All rights reserved - v" + appVersion}}</p>
   </div>
 
   <!-- Payment options provided -->
   <div class="payment-options">
     <p>100% Safe and Secure Payments with </p>
-    <img src="assets/images/Razorpay.png" alt="Payment options - Mindenious" loading="lazy">
+    <img src="assets/images/Razorpay.png" alt="Razorpay Payment - Mindenious" loading="lazy">
+    <img src="assets/images/Cashfree.png" alt="Cashfree Payment - Mindenious" loading="lazy">
   </div>
 </section>

@@ -21,8 +21,6 @@ export class OpeningDetailsComponent {
   currentOpeningData = CurrentOpeningDetails;
   loading: boolean = false;
   isFormSubmitted: boolean = false;
-  isFormInvalid: boolean = false;
-  invalidErrorMessage:string = "Sorry!!! Please fill the form details properly to subscribe our news letter";
 
   constructor(private route: ActivatedRoute, private formsService: FormsServices) {}
 
@@ -34,23 +32,15 @@ export class OpeningDetailsComponent {
   }
 
   applyNow(formData: any) {
-    let { name, email, phone } = formData.value;
-    if (name && email && phone) {
-      this.isFormInvalid = false
-      this.formsService.onFormSubmit(formData);
-      this.loading = true;
-      this.formsService.isSubscribed$.subscribe(res => {
-        if(res) {
-          this.formsService.isFormSubmitted.next(false);
-          this.isFormSubmitted = true;
-          this.loading = false;
-        }
-      })
-    } else {
-     this.isFormInvalid = true
-     setTimeout(() => {
-       this.isFormInvalid = false
-     }, 3000);
-    }
+    formData.value.date = this.formsService.getCurrentDateTime();
+    this.formsService.onFormSubmit(formData);
+    this.loading = true;
+    this.formsService.isSubscribed$.subscribe(res => {
+      if(res) {
+        this.formsService.isFormSubmitted.next(false);
+        this.isFormSubmitted = true;
+        this.loading = false;
+      }
+    })
   }
 }

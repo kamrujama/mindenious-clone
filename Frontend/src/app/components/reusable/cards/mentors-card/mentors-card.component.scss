@@ -12,6 +12,7 @@
     }
   }
 
+  .slider-wrapper,
   .mentors-profile {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -23,10 +24,11 @@
     //   }
     // }
 
+    .item,
     .card-wrapper {
       background: #00158024;
       overflow: hidden;
-      height: 300px;
+      height: 350px;
       width: 280px;
       display: flex;
       align-items: center;
@@ -102,7 +104,7 @@
   }
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1200px) {
   .mentors-wrapper {
     .mentors-profile {
       grid-template-columns: repeat(2, 1fr);
@@ -110,11 +112,26 @@
   }
 }
 
+
+@media screen and (width > 769px) {
+  .mobile-mode {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
+
+  .desktop-mode {
+    display: none !important;
+  }
+
+  .mobile-mode {
+    display: grid !important;
+  }
+
   .mentors-wrapper {
     .mentors-profile {
       grid-template-columns: 1fr;
-
       .card-wrapper {
         filter: grayscale(0);
 

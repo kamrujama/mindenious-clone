@@ -8,14 +8,20 @@
             {{data?.title}}
           </mat-panel-title>
         </mat-expansion-panel-header>
+        @if (data?.subTitle) {
         <ul class="list">
           @for (subModule of data?.subTitle; track $index) {
           <li>{{subModule}}</li>
           }
-          @if (data?.courseId) {
+        </ul>
+        } @else {
+        <p class="sub-title">
+          {{data?.description}}
+        </p>
+        @if (data?.courseId) {
           <button class="button accordion-link-btn" (click)="redirectToCourse(data?.courseId)">View Course</button>
           }
-        </ul>
+        }
       </mat-expansion-panel>
       }
     </mat-accordion>

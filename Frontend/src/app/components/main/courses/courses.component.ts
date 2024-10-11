@@ -15,6 +15,8 @@ import { MentorsCardComponent } from '../../reusable/cards/mentors-card/mentors-
 import { CareerReviewsComponent } from '../../reusable/career-reviews/career-reviews.component';
 import { NgOptimizedImage } from '@angular/common';
 import { ApplicationProcessComponent } from '../../reusable/application-process/application-process.component';
+import { AccordianComponent } from "../../reusable/accordian/accordian.component";
+import { DetailsFormComponent } from '../../reusable/details-form/details-form.component';
 
 @Component({
   selector: 'app-courses',
@@ -32,8 +34,10 @@ import { ApplicationProcessComponent } from '../../reusable/application-process/
     MentorsCardComponent,
     CareerReviewsComponent,
     NgOptimizedImage,
-    ApplicationProcessComponent
-  ],
+    ApplicationProcessComponent,
+    AccordianComponent,
+    DetailsFormComponent
+],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
 })
@@ -41,6 +45,7 @@ import { ApplicationProcessComponent } from '../../reusable/application-process/
 export class CoursesComponent {
   @ViewChild('couponInputBox') couponInputBox !: ElementRef;
   @ViewChild('phoneInput') phoneInput !: ElementRef;
+  @ViewChild('date') currentDateInput !: ElementRef;
 
   featuresList = [
     'Life time access',
@@ -95,6 +100,9 @@ export class CoursesComponent {
   isValidPhone: boolean = false;
   showCertificateModal: boolean = false;
   certificateUrl: string = '';
+  isUpiQRCodeVisible: boolean = false;
+  isQRCodeVisible: boolean = false;
+  isPreFormVisible: boolean = false;
 
   constructor(
     public navbarService: NavbarService,
@@ -103,11 +111,10 @@ export class CoursesComponent {
   ) { }
 
   ngOnInit() {
-    debugger;
     this.route.params.subscribe(params => {
-      const courseName = params['courseName'];
+      this.currentCourseId = Number(params['id']);
       this.courseData = CourseCategoryData.flatMap(item =>
-        item.subdomains.filter(subitem => subitem.courseName === courseName.split('-').join(' '))
+        item.subdomains.filter(subitem => subitem.id === this.currentCourseId)
       );
       if (this.courseData) {
         this.courseModule = this.courseData[0].courseModule;
@@ -118,6 +125,13 @@ export class CoursesComponent {
     this.pricePlans = PricePlans;
   }
 
+  getFormSubmissionStatus(status:boolean) {
+    if (status) {
+      this.isPreFormVisible = false;
+      this.isQRCodeVisible = true;
+    }
+  }
+
   openCertificate(url: string) {
     this.certificateUrl = url;
     this.showCertificateModal = true;
@@ -125,33 +139,6 @@ export class CoursesComponent {
 
   closeCertificateModal() {
     this.showCertificateModal = false;
-  }
-
-  submitFormData(formData: NgForm) {
-    let { name, phone } = formData.value;
-    this.isValidPhone = this.formsService.validatePhoneNumber(phone);
-
-    if (!this.isValidPhone) {
-      this.phoneInput.nativeElement.focus();
-      return;
-    }
-
-    if (name && phone) {
-      this.formsService.onFormSubmit(formData);
-      this.loading = true;
-      this.formsService.isSubscribed$.subscribe(res => {
-        if (res) {
-          this.formsService.isFormSubmitted.next(false);
-          this.loading = false;
-          this.downloadSyllabusPdf();
-        }
-      })
-    } else {
-      this.showAlertModal = true;
-      setTimeout(() => {
-        this.showAlertModal = false;
-      }, 3000)
-    }
   }
 
   downloadSyllabusPdf() {
@@ -203,6 +190,18 @@ export class CoursesComponent {
     this.showPaymentModal = false;
     this.paymentMode = 'partial';
     this.resetCoupons();
+    this.closeUPIContainer();
+  }
+
+  showUpiQRCode() {
+    this.isUpiQRCodeVisible = true;
+    this.isPreFormVisible = true;
+  }
+
+  closeUPIContainer() {
+    this.isUpiQRCodeVisible = false;
+    this.isPreFormVisible = false;
+    this.isQRCodeVisible = false;
   }
 
   updatePaymentMode(mode: string) {
@@ -212,6 +211,7 @@ export class CoursesComponent {
 
   pay() {
     this.isRedirectedToPaymentPage = true;
+    this.closeUPIContainer();
   }
 
   closeInfoModal(event: any) {

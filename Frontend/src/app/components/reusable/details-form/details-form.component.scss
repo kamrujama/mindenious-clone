@@ -1,0 +1,61 @@
+.form-section {
+  min-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+  @media screen and (width < 768px) {
+    min-width: 275px;
+  }
+
+  .user-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 75%;
+
+    @media screen and (width < 768px) {
+      width: 100%;
+    }
+
+
+    button,
+    input {
+      width: 100%;
+    }
+
+    textarea {
+      padding: 10px 20px;
+      resize: none;
+      overflow-y: auto;
+      border-radius: 10px;
+    }
+
+    .drop-mail-info {
+      font-weight: 500;
+      color: var(--text-red);
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+
+    button {
+      &:hover {
+        cursor: not-allowed;
+        background-color: var(--b-light-2);
+        color: black;
+      }
+
+      &.active:hover {
+        cursor: pointer;
+        background-color: var(--bg-orange);
+        color: white;
+        box-shadow: var(--card-shadow) !important;
+      }
+    }
+  }
+}

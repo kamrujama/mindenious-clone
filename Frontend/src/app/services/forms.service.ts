@@ -38,6 +38,23 @@ export class FormsServices {
     }
   }
 
+  getCurrentDateTime():string {
+    let currentDate = new Date().toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+
+    let currentTime = new Date().toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true
+    });
+
+    return currentDate + ' ' + currentTime;
+  }
+
+
   validatePhoneNumber(phoneNumber:string) {
     if (phoneNumber.replace(/\s/g, "").length !== 10) return false;
     return true;

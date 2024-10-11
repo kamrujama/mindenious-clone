@@ -17,33 +17,6 @@
     </div>
   </div>
 </section>
-<!--
-<section class="review-banner">
-  <div class="container">
-    <div class="card-body">
-      <img class="card-image" src="https://d1vwxdpzbgdqj.cloudfront.net/aiml-pp-new/transition-icon.svg" alt="career">
-      <div class="card-content">
-        <p class="card-heading">96%</p>
-        <p class="card-text">Program Satisfaction</p>
-      </div>
-    </div>
-    <div class="card-body">
-      <img class="card-image" src="https://d1vwxdpzbgdqj.cloudfront.net/home-new-variant/trust-pilot.png" alt="logo">
-      <div class="card-content">
-        <p class="card-heading">4.8/5</p>
-        <p class="card-text">Trustpilot</p>
-      </div>
-    </div>
-    <div class="card-body">
-      <img class="card-image"
-        src="https://d1vwxdpzbgdqj.cloudfront.net/s3-public-images/page-banners/home/course-report.png" alt="logo">
-      <div class="card-content">
-        <p class="card-heading">4.81/5</p>
-        <p class="card-text">Course Report</p>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <!-- our alumni works at -->
 <app-image-auto-slider></app-image-auto-slider>
@@ -69,24 +42,7 @@
   <div class="section-title">
     <h1>Course Modules</h1>
   </div>
-  <div class="course-accordian">
-    <mat-accordion class="module-accordian">
-      @for (module of courseModule; track $index) {
-      <mat-expansion-panel class="module-wrapper">
-        <mat-expansion-panel-header class="module-title">
-          <mat-panel-title class="title">
-            {{module.title}}
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <ul class="list sub-module">
-          @for (subModule of module.subTitle; track $index) {
-          <li>{{subModule}}</li>
-          }
-        </ul>
-      </mat-expansion-panel>
-      }
-    </mat-accordion>
-  </div>
+  <app-accordian [accordionData]="courseModule"></app-accordian>
 </section>
 
 <!-- download Syllabus banner -->
@@ -189,7 +145,7 @@
 @if (showPaymentModal) {
 <section class="payment-section">
   <div class="payment-wrapper">
-    <!-- <div class="close-modal"><i class="fa fa-times" (click)="closePaymentModal()"></i></div> -->
+    <div class="close-modal" title="Close"><i class="fa fa-times" (click)="closePaymentModal()"></i></div>
     <div class="payment-mode">
       <label (click)="updatePaymentMode('partial')">Pre-Registration</label>
       <label (click)="updatePaymentMode('full')">Full Payment</label>
@@ -223,15 +179,33 @@
       </div>
     </div>
     }
+
+    <!-- UPI QR Code Wrapper -->
+   @if (isUpiQRCodeVisible) {
+    <div class="upi-wrapper">
+      @if (isPreFormVisible) {
+        <div class="pre-form has-box-shadow">
+          <app-details-form (isFormSubmitted)="getFormSubmissionStatus($event)"></app-details-form>
+        </div>
+      }
+      @if (isQRCodeVisible) {
+        <div class="upi-qr-code">
+          <img src="assets/images/mindeniousUPI.jpg" loading="lazy" height="200px" width="200px" alt="">
+        </div>
+      }
+      <p class="note">*Once you submit your details, our official UPI QR code will be generated for you</p>
+    </div>
+   }
+    <!-- UPI QR Code Ends -->
+
     <div class="pay-cancel-wrapper">
-      <p class="note">*Payment will be processed once you complete the registration</p>
       <div class="buttons-wrapper">
+        <div class="pay pay-via-upi">
+          <button class="button" (click)="showUpiQRCode()" [class.active]="isUpiQRCodeVisible">Pay via UPI <i class="fa fa-credit-card" style="margin-left: 5px;"></i></button>
+        </div>
         <div class="pay">
           <a [href]="isCouponApplied ? paymentType.discountedPaymentLink : paymentMode === 'partial' ? paymentType.preRegistrationPaymentLink : paymentType.fullPaymentLink" target="_blank" (click)="pay()"
-            class="button">Pay Now</a>
-        </div>
-        <div class="cancel">
-          <button class="button" (click)="closePaymentModal()">Cancel</button>
+            class="button">Pay via Razorpay <i class="fa fa-credit-card" style="margin-left: 5px;"></i></a>
         </div>
       </div>
     </div>

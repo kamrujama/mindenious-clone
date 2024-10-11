@@ -1,14 +1,23 @@
 .course-banner {
-  animation: scale 0.5s ease-in-out;
+  animation: scale 0.3s ease-in-out;
 
   .card-container {
     display: flex;
     gap: 15px;
     height: 80vh;
 
+    @media screen and (width > 768px) and (width < 1100px) {
+      flex-direction: column;
+      height: auto;
+    }
+
     .card-background {
       width: 60%;
       border-radius: inherit;
+
+      @media screen and (width > 768px) and (width < 1100px) {
+        width: 100%;
+      }
 
       img {
         height: 100%;
@@ -23,6 +32,10 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+
+      @media screen and (width > 768px) and (width < 1100px) {
+        width: 100%;
+      }
 
       .course-heading {
         height: 40%;
@@ -117,20 +130,24 @@
     .career-outcome {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+      gap: 20px;
       place-items: center;
       width: 50%;
       margin: 0 auto;
 
+      @media screen and (width > 768px) and (width < 1100px) {
+        width: 100%;
+      }
+
       @media screen and (max-width: 768px) {
-        gap: 10px;
+        gap: 15px;
         grid-template-columns: repeat(1, 1fr);
         justify-content: center;
       }
 
       .card {
         height: 150px;
-        width: 320px;
+        width: 360px;
         display: flex;
         background: var(--bg-light-2);
         padding: 10px;
@@ -142,6 +159,7 @@
 
         @media screen and (max-width: 768px) {
           height: 120px;
+          width: 320px !important;
         }
 
         img {
@@ -279,7 +297,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: scale 0.5s;
+  animation: scale 0.3s;
 
   .body {
     background: #fff;
@@ -328,17 +346,18 @@
   align-items: center;
 
   .payment-wrapper {
-    width: 50vw;
+    width: 40vw;
+    max-height: 95vh;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     padding: 40px;
     position: relative;
-    transition: all 0.5s;
+    transition: all 0.3s;
 
     @media screen and (max-width: 768px) {
       padding: 20px;
@@ -350,18 +369,28 @@
       right: 20px;
       font-size: 24px;
       cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
+      }
     }
 
     .payment-mode {
       display: flex;
-      gap: 60px;
+      gap: 50px;
       position: relative;
-      height: 40px;
+      height: 30px;
       background: var(--bg-dark);
       align-items: center;
-      padding: 30px 20px;
+      padding: 25px;
       border-radius: 32px;
       cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        font-size: var(--font-size-sm);
+      }
 
       label {
         background: transparent;
@@ -430,6 +459,34 @@
       }
     }
 
+    .upi-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+      .upi-qr-code {
+        height: fit-content;
+        width: fit-content;
+        overflow: hidden;
+
+        img {
+          display: block;
+          aspect-ratio: 1;
+          object-fit: cover;
+          inline-size: fit-content;
+          border-radius: 10px;
+          transform: scale(1.2);
+        }
+      }
+
+      .note {
+        @media screen and (max-width: 768px) {
+          font-size: var(--font-size-sm);
+        }
+      }
+    }
+
     .pay-cancel-wrapper {
       display: flex;
       flex-direction: column;
@@ -438,35 +495,38 @@
 
       .buttons-wrapper {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         align-items: center;
 
         .pay {
+          .button {
+            font-size: var(--font-size-md);
+            font-weight: 300;
+            background: var(--bg-primary);
+            color: white;
+            transition: background 0.3s;
+
+            &.active,
+            &:hover {
+              background: var(--bg-dark) !important;
+            }
+
+            @media screen and (max-width: 768px) {
+              font-size: var(--font-size-sm);
+              padding: 10px 20px;
+            }
+          }
+
           a {
             display: block;
             text-decoration: none;
             outline: none;
             border: 0;
-            padding: 10px 20px;
+            padding: 10px 30px;
             border-radius: 32px;
-            font-size: 18px;
-            font-weight: 300;
-            background: var(--bg-primary);
-            color: white;
             cursor: pointer;
           }
         }
-
-        .cancel {
-          .button {
-            background-color: var(--bg-red);
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: 300;
-          }
-        }
-
       }
     }
   }
@@ -663,45 +723,6 @@
   }
 }
 
-.course-module {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-
-  .course-accordian {
-    .module-accordian {
-
-      &,
-      .list {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .module-wrapper {
-        padding: 10px 20px;
-        box-shadow: 0 0 1px 1px #ccc;
-        border-radius: 5px;
-
-        .module-title {
-          height: fit-content;
-        }
-
-        .sub-module {
-          font-size: var(--font-size-sm);
-          margin-top: 10px;
-        }
-      }
-
-      .title {
-        font-weight: 600;
-        letter-spacing: 1px;
-        font-size: var(--font-size-base);
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   .course-banner {
     .card-container {
@@ -859,4 +880,4 @@
 @media screen and (min-width: 769px) and (max-width: 1044px) {}
 
 /* For desktop */
-@media screen and (min-width: 1045px) {}
+@media screen and (min-width: 1200px) {}

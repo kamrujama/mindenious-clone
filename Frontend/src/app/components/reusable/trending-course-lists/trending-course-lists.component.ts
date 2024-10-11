@@ -2,6 +2,7 @@ import { Component, Renderer2, ViewChild } from '@angular/core';
 import { NavbarService } from '../../../services/header/navbar.service';
 import { CourseCategoryData } from '../../../../../data';
 import { ShortenPipe } from '../../../pipes/shorten.pipe';
+import cloneDeep from 'lodash/cloneDeep';
 
 @Component({
   selector: 'app-trending-course-lists',
@@ -14,8 +15,8 @@ import { ShortenPipe } from '../../../pipes/shorten.pipe';
 })
 export class TrendingCourseListsComponent {
   @ViewChild('tredingCourses') tredingCourses: any;
-  courseCategory = CourseCategoryData;
-  coursesList = CourseCategoryData[0];
+  courseCategory = cloneDeep(CourseCategoryData);
+  coursesList = this.courseCategory[0];
 
   constructor(private navbarService: NavbarService, private renderer: Renderer2) {}
   navigateToCourse(path:string, details:any) {

@@ -1,9 +1,10 @@
 import { Component, ElementRef, Input } from '@angular/core';
+import { SliderComponent } from "../slider/slider.component";
 
 @Component({
   selector: 'app-career-reviews',
   standalone: true,
-  imports: [],
+  imports: [SliderComponent],
   templateUrl: './career-reviews.component.html',
   styleUrl: './career-reviews.component.scss'
 })
@@ -46,6 +47,7 @@ export class CareerReviewsComponent {
   isLeftDisabled = true;
   isRightDisabled = false;
   sliderWrapper:HTMLElement | any;
+  currentIndex = 0;
 
   constructor(private elementRef: ElementRef) {}
 

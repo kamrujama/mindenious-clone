@@ -29,6 +29,7 @@
   // Typography
   --font-family: sans-serif; // Replace with your desired font family
   --font-size-base: 16px;
+  --font-size-xs: calc(var(--font-size-base) * 0.6);
   --font-size-sm: calc(var(--font-size-base) * 0.8);
   --font-size-md: calc(var(--font-size-base) * 1.0);
   --font-size-lg: calc(var(--font-size-base) * 1.2);
@@ -233,26 +234,26 @@ a {
 }
 
 .section-padding {
-  padding: 40px 10% 0 10%;
+  padding: 40px 10% 0 10% !important;
 
   @media screen and (max-width: 768px) {
-    padding: 40px 5% 0 5%;
+    padding: 40px 5% 0 5% !important;
   }
 }
 
 .section-margin {
-  margin: 40px 10% 0 10%;
+  margin: 40px 10% 0 10% !important;
 
   @media screen and (max-width: 768px) {
-    margin: 40px 5% 0 5%;
+    margin: 40px 5% 0 5% !important;
   }
 }
 
 .section-landing-margin {
-  margin: 120px 10% 0 10%;
+  margin: 120px 10% 0 10% !important;
 
   @media screen and (max-width: 768px) {
-    margin: 120px 5% 0 5%;
+    margin: 120px 5% 0 5% !important;
   }
 }
 

@@ -6,6 +6,10 @@
     justify-content: center;
     margin-top: 40px;
 
+    @media screen and (width > 768px) and (width < 1200px) {
+      flex-wrap: wrap;
+    }
+
     .wrapper {
       width: 500px;
       height: 450px;
@@ -13,6 +17,9 @@
       flex-direction: column;
       justify-content: space-between;
       transition: box-shadow 0.2s ease;
+      @media screen and (width > 768px) and (width < 1200px) {
+        height: auto;
+      }
 
       &:hover {
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;

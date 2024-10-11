@@ -11,11 +11,19 @@
     padding: 20px;
     gap: 20px;
 
+    @media screen and (width > 768px) and (width < 1150px) {
+      flex-direction: column-reverse;
+    }
+
     .home-banner-text {
       width: 45%;
       display: flex;
       flex-direction: column;
       gap: 10px;
+
+      @media screen and (width > 768px) and (width < 1150px) {
+        width: 100%;
+      }
 
       .home-overline {
         font-size: 16px;
@@ -35,14 +43,19 @@
         font-weight: 300;
         letter-spacing: 1px;
         font-size: var(--subheading);
-        font-weight: 400;
+        font-weight: 300;
         letter-spacing: 1px;
-        opacity: 0.6;
       }
 
       .explore-btn {
+        display: flex;
+        gap: 10px;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+
         .enroll-now {
-          margin-left: 10px;
           background-color: var(--bg-dark);
           color: var(--text-white);
 
@@ -56,6 +69,10 @@
     .hero-image {
       width: 55%;
       padding-top: 20px;
+
+      @media screen and (width > 768px) and (width < 1150px) {
+        width: 100%;
+      }
 
       img {
         width: 100%;
@@ -91,18 +108,18 @@
   }
 }
 
-/* For tablet */
-@media screen and (min-width: 825px) and (max-width: 1419px) {
-  .home-banner {
-    .home-banner-wrapper {
-      height: 40vh;
+// /* For tablet */
+// @media screen and (min-width: 825px) and (max-width: 1419px) {
+//   .home-banner {
+//     .home-banner-wrapper {
+//       height: 40vh;
 
-      .home-banner-text {
-        padding: 20px !important;
-      }
-    }
-  }
-}
+//       .home-banner-text {
+//         padding: 20px !important;
+//       }
+//     }
+//   }
+// }
 
 /* For desktop */
-@media screen and (min-width: 1419px) {}
+// @media screen and (min-width: 1419px) {}

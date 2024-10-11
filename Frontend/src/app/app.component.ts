@@ -31,7 +31,7 @@ import { SignalService } from './services/signal.service';
 })
 
 export class AppComponent {
-  title = 'lms-project';
+  title = 'mindenious-edutech';
   showNewsLetterPopup: boolean = false;
   signalService = inject(SignalService);
   private timeoutId: any;

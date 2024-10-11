@@ -49,6 +49,7 @@
 
   <form #sheetForm="ngForm" method="POST" class="input-wrapper" (ngSubmit)="applyNow(sheetForm)">
     <input class="input" type="text" name="role" [(ngModel)]="openingDetailsData.role" style="display: none;">
+    <input #date="ngModel" class="input" type="text" name="date" placeholder="Current date" ngModel style="display: none;">
     <input #name="ngModel" class="input" type="text" name="name" placeholder="Full Name" minlength="3" ngModel required>
     @if (name.invalid && (name.dirty || name.touched)) {
       @if (name.hasError('required')) {
@@ -89,10 +90,6 @@
   @if (isFormSubmitted) {
   <app-modal-popup [modalDuration]="3000" [modalType]="'success'"
     [modalBody]="'Thank you for subscribing to our newsletter.'"></app-modal-popup>
-  }
-
-  @if (isFormInvalid) {
-  <app-modal-popup [modalDuration]="3000" [modalType]="'error'" [modalBody]="invalidErrorMessage"></app-modal-popup>
   }
 
 </section>

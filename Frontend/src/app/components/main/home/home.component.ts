@@ -13,6 +13,7 @@ import { CareerReviewsComponent } from '../../reusable/career-reviews/career-rev
 import { WhyChooseUsComponent } from '../../reusable/why-choose-us/why-choose-us.component';
 import { ApplicationProcessComponent } from '../../reusable/application-process/application-process.component';
 import { CompaniesCollaborationComponent } from '../../reusable/companies-collaboration/companies-collaboration.component';
+import { FAQsComponent } from "../../reusable/faqs/faqs.component";
 
 @Component({
   selector: 'app-home',
@@ -30,8 +31,9 @@ import { CompaniesCollaborationComponent } from '../../reusable/companies-collab
     CareerReviewsComponent,
     WhyChooseUsComponent,
     ApplicationProcessComponent,
-    CompaniesCollaborationComponent
-  ],
+    CompaniesCollaborationComponent,
+    FAQsComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

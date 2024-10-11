@@ -14,7 +14,7 @@
         <div class="overlay"></div>
         }
         <button [class.active]="showMegaMenu" class="button is-bg-primary desktop-btn"
-          (click)="showMegaMenu = !showMegaMenu">Programs</button>
+          (click)="showMegaMenu = !showMegaMenu; isTrendingModalOpen = false;">Programs</button>
         <div class="mega-menu">
           <ul class="program-list">
             @for(domain of megaMenuObject; track domain.title) {
@@ -31,11 +31,13 @@
             <div class="mega-sub-menu">
               <ul class="program-category">
                 @for(subdomain of domain.subdomains; track subdomain.courseName) {
+                @if (!subdomain?.isHidden) {
                 <li>
                   <app-course-card [courseName]="subdomain.courseName" [courseDuration]="subdomain.courseDuration"
                     [courseMode]="subdomain.courseMode" [courseBgImg]="subdomain.courseBgImg" [height]="'120px'"
                     [width]="'310px'" (click)="navigateToCourse('/course', subdomain)"></app-course-card>
                 </li>
+                }
                 }
               </ul>
             </div>
@@ -72,7 +74,8 @@
           <!-- @if(isTrendingModalOpen) { -->
           <ul class="trending-course-items">
             @for (item of topTrendingCourses; track $index) {
-            <li class="trending-course-item" (click)="navigateToCourse('/course', item)">{{item.courseName | shorten : 20}}
+            <li class="trending-course-item" (click)="navigateToCourse('/course', item)">{{item.courseName | shorten :
+              20}}
             </li>
             }
           </ul>
@@ -102,13 +105,14 @@
       </div> -->
       <!-- trending course menu -->
       @if(isTrendingModalOpen) {
-        <ul class="trending-course-items">
-          @for (item of topTrendingCourses; track $index) {
-          <li class="trending-course-item" (click)="navigateToCourse('/course', item)">{{item.courseName | shorten : 20}}
-          </li>
-          }
-        </ul>
+      <ul class="mobile-trending-course-items">
+        @for (item of topTrendingCourses; track $index) {
+        <li class="trending-course-item" (click)="navigateToCourse('/course', item); isTrendingModalOpen = false;">
+          {{item.courseName | shorten : 20}}
+        </li>
         }
+      </ul>
+      }
 
       <!-- Response mobile menu -->
       <div class="mobile-nav-links">

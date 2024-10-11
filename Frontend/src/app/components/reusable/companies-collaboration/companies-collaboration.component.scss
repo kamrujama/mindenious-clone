@@ -4,17 +4,24 @@
   justify-content: center;
   gap: 40px;
 
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
   .logo-wrapper {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
+    height: 125px;
+    width: 125px;
     margin-top: 20px;
 
     img {
       height: 100%;
       width: 100%;
       object-fit: contain;
-      border-radius: 50%;
     }
   }
+}
+
+.has-border-radius-50 {
+  border-radius: 50%;
 }
